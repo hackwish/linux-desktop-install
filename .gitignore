@@ -1,0 +1,24 @@
+### Ansible ###
+*.retry
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+*.logs
+
+### Vagrant Patch ###
+*.box
+
+### others ###
+*.tmp
+*.dpkg-dist
+*.log
+.sync-*
+
+.galaxy_install_info
+
+ansible/roles/*
+
+ansible/vault_password

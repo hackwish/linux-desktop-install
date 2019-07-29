@@ -1,0 +1,38 @@
+---
+- name: Run common
+  import_playbook: common.yml
+
+- name: Deploy Desktop with Ansible
+  hosts: desktop
+  become: yes
+
+  roles:
+    - ohmyzsh
+    - cloudalchemy.node-exporter
+    - suzuki-shunsuke.git-lfs-ubuntu
+    - gnagano.ansible_gitflow
+    - ngetchell.vscode
+    - capistrano
+    - rgibert.valve_steam
+    - geerlingguy.packer
+    - andrewrothstein.vagrant
+    #DOCKER
+    - docker
+    #K8S-RKE
+    - gantsign.minikube
+    - andrewrothstein.kubectl
+    - rke
+    - andrewrothstein.kubernetes-helm
+    - rancher2-cli
+    - kompose-converter
+    - wtanaka.gcloud_sdk
+
+  tasks:
+    - name: Reload Font cache
+      shell: fc-cache -fv
+
+    - name: Config git user
+      shell: git config --global color.ui true && git config --global user.email "{{ ansible_user_id }}@{{ ansible_fqdn }}" && git config --global user.name "{{ ansible_user_id }}"
+
+    - name: Add Vagrant plugins
+      shell: vagrant plugin install vagrant-mutate vagrant-libvirt vagrant-vbguest vagrant-puppet-install vocker  vagrant-lxc vagrant-list vagrant-hosts vagrant-hostmanager vagrant-exec vagrant-camera vagrant-cachier sahara vagrant-scp

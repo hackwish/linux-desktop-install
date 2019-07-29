@@ -1,0 +1,6 @@
+[desktop]
+127.0.0.1
+
+[desktop:vars]
+ansible_connection=local
+ansible_user=root

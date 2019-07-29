@@ -1,0 +1,52 @@
+---
+
+- name: docker
+  src: https://github.com/hackwish/ansible-docker.git
+
+- name: rke
+  src: https://github.com/hackwish/ansible-rke.git
+
+- name: kompose-converter
+  src: https://github.com/hackwish/ansible-kompose-converter.git
+
+- name: rancher2-cli
+  src: https://github.com/hackwish/ansible-rancher2-cli.git
+
+- name: ohmyzsh
+  src: https://github.com/hackwish/ansible-ohmyzsh.git
+
+- name: capistrano
+  src: https://github.com/hackwish/ansible-capistrano.git
+
+- name: cloudalchemy.node-exporter
+  src: cloudalchemy.node-exporter
+
+- name: andrewrothstein.kubernetes-helm
+  src: andrewrothstein.kubernetes-helm
+
+- name: andrewrothstein.kubectl
+  src: andrewrothstein.kubectl
+
+- name: wtanaka.gcloud_sdk
+  src: wtanaka.gcloud_sdk
+
+- name: suzuki-shunsuke.git-lfs-ubuntu
+  src: suzuki-shunsuke.git-lfs-ubuntu
+
+- name: gantsign.minikube
+  src: gantsign.minikube
+
+- name: gnagano.ansible_gitflow
+  src: gnagano.ansible_gitflow
+
+- name: ngetchell.vscode
+  src: ngetchell.vscode
+
+- name: rgibert.valve_steam
+  src: rgibert.valve_steam
+
+- name: geerlingguy.packer
+  src: geerlingguy.packer
+
+- name: andrewrothstein.vagrant
+  src: andrewrothstein.vagrant
