@@ -50,3 +50,6 @@
 
 - name: andrewrothstein.vagrant
   src: andrewrothstein.vagrant
+
+- name: andrewrothstein.terraform
+  src: andrewrothstein.terraform

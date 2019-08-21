@@ -37,7 +37,7 @@ echo "Iniciando Ansible Deploy"
 ANSIBLE_CUSTOM_DIR=`pwd`
 
 echo "Descargando requirements"
-ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
+ansible-galaxy install -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
 echo "Comienza Deployment con Ansible"
 ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml

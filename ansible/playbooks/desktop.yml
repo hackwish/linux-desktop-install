@@ -9,23 +9,22 @@
   roles:
     - ohmyzsh
     - cloudalchemy.node-exporter
-    - suzuki-shunsuke.git-lfs-ubuntu
-    - gnagano.ansible_gitflow
+    #- suzuki-shunsuke.git-lfs-ubuntu
+    #- gnagano.ansible_gitflow
     - ngetchell.vscode
-    - capistrano
-    - rgibert.valve_steam
+    ##- capistrano
+    ##- rgibert.valve_steam
     - geerlingguy.packer
     - andrewrothstein.vagrant
-    #DOCKER
-    - docker
-    #K8S-RKE
+    ##- docker
     - gantsign.minikube
     - andrewrothstein.kubectl
     - rke
     - andrewrothstein.kubernetes-helm
     - rancher2-cli
     - kompose-converter
-    - wtanaka.gcloud_sdk
+    - andrewrothstein.terraform
+    #- wtanaka.gcloud_sdk
 
   tasks:
     - name: Reload Font cache
