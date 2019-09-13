@@ -64,8 +64,9 @@
 
     #Spotify
     - apt_key:
-        keyserver: hkp://keyserver.ubuntu.com:80
-        id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+        # keyserver: hkp://keyserver.ubuntu.com:80
+        # id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+        url: https://download.spotify.com/debian/pubkey.gpg
         state: present
 
     - apt_repository:
@@ -145,6 +146,10 @@
           repo: 'deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu xenial main'
           state : present
 
+    #BOOT REPAIR
+    - apt_repository:
+        repo: ppa:yannubuntu/boot-repair
+
     #ADD i386 SUPPORT
     - lineinfile: dest=/var/lib/dpkg/arch line="amd64" create=yes
     - lineinfile: dest=/var/lib/dpkg/arch line="i386" create=yes
@@ -194,6 +199,7 @@
           - boinc-client
           - boinc-manager
           - boinc-screensaver
+          - boot-repair
           - brasero-cdrkit
           - browser-plugin-vlc
           - build-essential
@@ -225,6 +231,7 @@
           - docker-compose
           - dropbox
           - ebtables
+          - fdupes
           - figlet
           - file-roller
           - filezilla
@@ -232,6 +239,7 @@
           - filezilla-theme-papirus
           - fonts-noto
           - freeglut3
+          - fslint
           - g++
           - gcc
           - gdebi
@@ -370,6 +378,7 @@
           - rbenv
           - redshift
           - redshift-gtk
+          - rdfind
           - ruby-dev
           - ruby-full
           - screen
@@ -678,10 +687,17 @@
       when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
 
     #SYSCTL
+    ##SyncThing feature
+    - sysctl:
+        name: fs.inotify.max_user_watches
+        value: '204800'
+        state: present
+
     - sysctl:
         name: vm.swappiness
         value: '0'
         state: present
+
     - sysctl:
         name: fs.file-max
         value: '2097152'
@@ -791,7 +807,7 @@
             - { limit_type: '-', limit_item: 'nofile', value: 65536 }
             - { limit_type: '-', limit_item: 'nproc', value: 65536 }
             - { limit_type: 'soft', limit_item: 'nofile', value: 60000 }
-            - { limit_type: 'hard', limit_item: 'nofile', value: 80000 }
+            - { limit_type: 'hard', limit_item: 'nofile', value: 524288 }
 
     - name: reload settings from all system configuration files
       shell: sysctl --system
