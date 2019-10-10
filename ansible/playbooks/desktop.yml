@@ -1,12 +1,13 @@
 ---
-- name: Run common
-  import_playbook: common.yml
+# - name: Run common
+#   import_playbook: common.yml
 
 - name: Deploy Desktop with Ansible
   hosts: desktop
   become: yes
 
   roles:
+    - common-desktop
     - ohmyzsh
     - cloudalchemy.node-exporter
     #- suzuki-shunsuke.git-lfs-ubuntu
@@ -27,11 +28,17 @@
     #- wtanaka.gcloud_sdk
 
   tasks:
+    - name : list users to apply oh-my-zsh
+      shell: "getent passwd | awk -F: '$3 > 999 {print $1}'"
+      register: users
+
     - name: Reload Font cache
       shell: fc-cache -fv
 
     - name: Config git user
-      shell: git config --global color.ui true && git config --global user.email "{{ ansible_user_id }}@{{ ansible_fqdn }}" && git config --global user.name "{{ ansible_user_id }}"
+      shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}"
+      with_items: users.stdout_lines
+      become_user: "{{ item }}"
 
     - name: Add Vagrant plugins
       shell: vagrant plugin install vagrant-mutate vagrant-libvirt vagrant-vbguest vagrant-puppet-install vocker  vagrant-lxc vagrant-list vagrant-hosts vagrant-hostmanager vagrant-exec vagrant-camera vagrant-cachier sahara vagrant-scp

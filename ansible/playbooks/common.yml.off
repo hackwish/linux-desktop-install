@@ -149,6 +149,7 @@
     #BOOT REPAIR
     - apt_repository:
         repo: ppa:yannubuntu/boot-repair
+        codename: bionic
 
     #ADD i386 SUPPORT
     - lineinfile: dest=/var/lib/dpkg/arch line="amd64" create=yes
@@ -238,6 +239,7 @@
           - filezilla-common
           - filezilla-theme-papirus
           - fonts-noto
+          - fpc
           - freeglut3
           - fslint
           - g++
@@ -284,17 +286,26 @@
           - k3b
           - kdeconnect
           - kubectl
+          - libavformat-dev
           - libdvd-pkg
           - libegl1-mesa
+          - libelf-dev
           - libffi-dev
           - libfile-tee-perl
+          - libfreetype6-dev
           - libgdbm-dev
           - libguestfs-perl
           - libjansson-dev
+          - liblua5.3-dev
           - libmagic-dev
           - libncurses5-dev
+          - libopencv-highgui-dev
           - libpython-dev
+          - libportmidi-dev
           - libreadline-dev
+          - libswscale-dev
+          - libsdl2-image-dev
+          - libsqlite3-dev
           - libssl-dev
           - libstdc++5
           - libstdc++6
@@ -359,6 +370,7 @@
           - pkg-config
           - plank
           - playonlinux
+          - portaudio19-dev
           - postfix
           - powertop
           - preload
@@ -379,6 +391,7 @@
           - redshift
           - redshift-gtk
           - rdfind
+          - rtl8812au-dkms
           - ruby-dev
           - ruby-full
           - screen
@@ -434,6 +447,7 @@
           - vlc
           - whois
           - wine1.8
+          - wine32-development
           - xclip
           - xinetd
           - xserver-xorg

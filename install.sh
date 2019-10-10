@@ -16,6 +16,10 @@ set -e
 
 apt-add-repository universe
 apt-add-repository multiverse
+apt-add-repository --yes ppa:ansible/ansible
+
+echo "Actualizando el sistema..."
+apt-get update # && apt-get -y --force-yes upgrade && apt-get -y --force-yes dist-upgrade
 
 echo "Instalando dependencias previas"
 apt-get install -y curl \
@@ -24,11 +28,6 @@ apt-get install -y curl \
 		git \
 		software-properties-common \
 		apt-transport-https
-
-apt-add-repository --yes ppa:ansible/ansible
-
-echo "Actualizando el sistema..."
-apt-get update # && apt-get -y --force-yes upgrade && apt-get -y --force-yes dist-upgrade
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
