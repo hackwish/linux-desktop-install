@@ -1,3 +1,9 @@
+cd /home/${USER}/.config/sublime-text-3 &&
+mkdir -p 'Installed Packages' &&
+wget https://packagecontrol.io/Package%20Control.sublime-package -P Installed\ Packages
+
+cd /home/${USER}/.config/sublime-text-3/Packages &&
+
 git clone https://bitbucket.org/hmml/jsonlint.git &&
 git clone https://github.com/73rhodes/Sublime-JSLint.git &&
 git clone https://github.com/adambullmer/sublime_ansible_vault.git &&
@@ -78,7 +84,7 @@ git clone https://github.com/SublimeLinter/SublimeLinter.git &&
 git clone https://github.com/SublimeText/Rake.git &&
 git clone https://github.com/tadast/sublime-rails-snippets.git &&
 git clone https://github.com/temochka/sublime-text-2-github-tools.git &&
-git clone https://github.com/tennantje/railsdev-sublime-snippets.git &&
+#git clone https://github.com/tennantje/railsdev-sublime-snippets.git &&
 git clone https://github.com/thespacedoctor/fundamentals-Sublime-Snippets.git &&
 git clone https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint.git &&
 git clone https://github.com/titoBouzout/SideBarEnhancements.git &&
@@ -100,4 +106,8 @@ git clone https://github.com/xr1337/sublime-kubernetes-autocomplete.git &&
 git clone https://github.com/Zeeker/sublime-GitConflictResolver.git &&
 git clone https://github.com/math2001/MarkdownLivePreview.git &&
 git clone https://github.com/braver/MarkdownHighlighting.git &&
-git clone https://github.com/jonschlinkert/sublime-markdown-extended.git
+git clone https://github.com/jonschlinkert/sublime-markdown-extended.git &&
+git clone https://github.com/memoryleak/TerraformSnippets-AWS.git TerraformSnippets-AWS &&
+git clone https://github.com/alexlouden/Terraform.tmLanguage.git &&
+git clone https://github.com/p3lim/sublime-terrafmt Terrafmt
+

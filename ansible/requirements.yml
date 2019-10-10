@@ -1,5 +1,8 @@
 ---
 
+- name: common-desktop
+  src: https://github.com/hackwish/ansible-common-desktop.git
+
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
 
