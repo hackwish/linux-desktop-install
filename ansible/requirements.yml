@@ -21,6 +21,9 @@
 - name: capistrano
   src: https://github.com/hackwish/ansible-capistrano.git
 
+- name: ibmcloud
+  src: https://github.com/hackwish/ansible-ibmcloud.git
+  
 - name: cloudalchemy.node-exporter
   src: cloudalchemy.node-exporter
 

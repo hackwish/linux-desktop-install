@@ -26,6 +26,7 @@
     - kompose-converter
     - andrewrothstein.terraform
     #- wtanaka.gcloud_sdk
+    - ibmcloud
 
   tasks:
     - name : list users to apply oh-my-zsh
