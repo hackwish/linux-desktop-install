@@ -59,3 +59,6 @@
 
 - name: andrewrothstein.terraform
   src: andrewrothstein.terraform
+
+- name: andrelohmann.azurecli
+  src: andrelohmann.azurecli
