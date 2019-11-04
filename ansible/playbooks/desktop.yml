@@ -27,6 +27,7 @@
     - andrewrothstein.terraform
     #- wtanaka.gcloud_sdk
     - ibmcloud
+    - andrelohmann.azurecli
 
   tasks:
     - name : list users to apply oh-my-zsh
