@@ -24,6 +24,9 @@
 - name: ibmcloud
   src: https://github.com/hackwish/ansible-ibmcloud.git
   
+- name: azurecli
+  src: https://github.com/hackwish/ansible-role-azurecli.git
+
 - name: cloudalchemy.node-exporter
   src: cloudalchemy.node-exporter
 
@@ -60,5 +63,5 @@
 - name: andrewrothstein.terraform
   src: andrewrothstein.terraform
 
-- name: andrelohmann.azurecli
-  src: andrelohmann.azurecli
+# - name: andrelohmann.azurecli
+#   src: andrelohmann.azurecli
