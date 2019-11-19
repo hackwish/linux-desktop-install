@@ -36,20 +36,20 @@
 - name: andrewrothstein.kubectl
   src: andrewrothstein.kubectl
 
-- name: wtanaka.gcloud_sdk
-  src: wtanaka.gcloud_sdk
+# - name: wtanaka.gcloud_sdk
+#   src: wtanaka.gcloud_sdk
 
-- name: suzuki-shunsuke.git-lfs-ubuntu
-  src: suzuki-shunsuke.git-lfs-ubuntu
+# - name: suzuki-shunsuke.git-lfs-ubuntu
+#   src: suzuki-shunsuke.git-lfs-ubuntu
 
 - name: gantsign.minikube
   src: gantsign.minikube
 
-- name: gnagano.ansible_gitflow
-  src: gnagano.ansible_gitflow
+# - name: gnagano.ansible_gitflow
+#   src: gnagano.ansible_gitflow
 
-- name: ngetchell.vscode
-  src: ngetchell.vscode
+# - name: ngetchell.vscode
+#   src: ngetchell.vscode
 
 - name: rgibert.valve_steam
   src: rgibert.valve_steam

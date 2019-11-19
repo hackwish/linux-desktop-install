@@ -12,7 +12,7 @@
     - cloudalchemy.node-exporter
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
-    - ngetchell.vscode
+    # - ngetchell.vscode
     ##- capistrano
     ##- rgibert.valve_steam
     - geerlingguy.packer
