@@ -10,22 +10,17 @@
     - common-desktop
     - ohmyzsh
     - cloudalchemy.node-exporter
-    #- suzuki-shunsuke.git-lfs-ubuntu
-    #- gnagano.ansible_gitflow
-    - ngetchell.vscode
-    ##- capistrano
-    ##- rgibert.valve_steam
-    - geerlingguy.packer
-    - andrewrothstein.vagrant
-    ##- docker
-    - gantsign.minikube
-    - andrewrothstein.kubectl
-    - rke
-    - andrewrothstein.kubernetes-helm
-    - rancher2-cli
-    - kompose-converter
-    - andrewrothstein.terraform
-    #- wtanaka.gcloud_sdk
+    # - geerlingguy.packer
+    # - andrewrothstein.vagrant
+    # - gantsign.minikube
+    # - andrewrothstein.kubectl
+    # - rke
+    # - andrewrothstein.kubernetes-helm
+    # - rancher2-cli
+    # - kompose-converter
+    # - andrewrothstein.terraform
+    # - ibmcloud
+    # - azurecli
 
   tasks:
     - name : list users to apply oh-my-zsh
@@ -37,8 +32,7 @@
 
     - name: Config git user
       shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}"
-      with_items: users.stdout_lines
-      become_user: "{{ item }}"
+      with_items: "{{ users.stdout_lines }}"
 
-    - name: Add Vagrant plugins
-      shell: vagrant plugin install vagrant-mutate vagrant-libvirt vagrant-vbguest vagrant-puppet-install vocker  vagrant-lxc vagrant-list vagrant-hosts vagrant-hostmanager vagrant-exec vagrant-camera vagrant-cachier sahara vagrant-scp
+    # - name: Add Vagrant plugins
+    #   shell: vagrant plugin install vagrant-mutate vagrant-libvirt vagrant-vbguest vagrant-puppet-install vocker  vagrant-lxc vagrant-list vagrant-hosts vagrant-hostmanager vagrant-exec vagrant-camera vagrant-cachier sahara vagrant-scp

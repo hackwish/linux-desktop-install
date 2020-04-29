@@ -12,8 +12,8 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/bionic64"
-  config.vm.box_url = "ubuntu/bionic64"
+  config.vm.box = "geerlingguy/ubuntu2004"
+  config.vm.box_url = "geerlingguy/ubuntu2004"
   config.ssh.insert_key = false
   config.vbguest.auto_update = false
   if Vagrant.has_plugin?("vagrant-cachier")
@@ -31,8 +31,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   #ANSIBLE
   config.vm.define "desktop" do |master|
-    master.vm.hostname = "desktop01.bydefault-cl.test"
-    master.vm.network :private_network, ip: "172.16.240.10"
+    master.vm.hostname = "desktop01.bydefault.test"
+    master.vm.network :private_network, ip: "10.16.240.10"
     master.vm.network :forwarded_port, guest: 22, host: 2401, id: "ssh"
 
     #master.vm.synced_folder "ansible/", "/vagrant/ansible/" #, type: 'nfs'
