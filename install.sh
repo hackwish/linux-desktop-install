@@ -38,9 +38,9 @@ echo "Instalando Ansible"
 alias pip='pip3'
 alias python='python3'
 
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python get-pip.py
-pip install ansible
+#curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+#python get-pip.py
+#pip install ansible
 
 # apt-add-repository --yes ppa:ansible/ansible
 
@@ -50,7 +50,7 @@ pip install ansible
 
 #apt-get update
 
-#DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
+DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
 echo "Iniciando Ansible Deploy"
 ANSIBLE_CUSTOM_DIR=`pwd`
