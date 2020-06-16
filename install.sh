@@ -69,6 +69,9 @@ else
 	export DISTRIB_CODENAME=`lsb_release -c -s`
 fi
 
+# Workaround Linux Mint 20 no Snaps Support
+rm -f /etc/apt/preferences.d/nosnap.pref
+
 echo "CodeName AHORA: $DISTRIB_CODENAME"
 
 #Ansible
