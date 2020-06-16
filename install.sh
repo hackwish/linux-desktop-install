@@ -6,20 +6,29 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # Bootstraping
-set -e
+#set -e
 
-# # install that if we have to.
-# which lsb_release || apt-get --yes install lsb-release
+# install that if we have to.
+which lsb_release && apt-get --yes install lsb-release
 
-# # Load up the release information
+# Load up the release information
+export DISTRIB_CODENAME=`lsb_release -c -s`
 # DISTRIB_CODENAME=`lsb_release -c -s`
 
 apt-add-repository universe
 apt-add-repository multiverse
-apt-add-repository --yes ppa:ansible/ansible
+
+if [ ${DISTRIB_CODENAME} == 'bionic' ] || [ ${DISTRIB_CODENAME} == 'disco' ] || [ ${DISTRIB_CODENAME} == 'eoan' ]; then
+	echo "Adding Ansible PPA"
+   	apt-add-repository --yes ppa:ansible/ansible
+else
+	echo "NOT Adding Ansible PPA"	
+	echo $DISTRIB_CODENAME
+fi
+
 
 echo "Actualizando el sistema..."
-apt-get update # && apt-get -y --force-yes upgrade && apt-get -y --force-yes dist-upgrade
+apt-get update && apt-get -y --force-yes upgrade && apt-get -y --force-yes dist-upgrade
 
 echo "Instalando dependencias previas"
 apt-get install -y curl \
@@ -30,6 +39,20 @@ apt-get install -y curl \
 		apt-transport-https
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
+
+# Fix Ubuntu codenames for based distros
+echo "CodeName ANTES: $DISTRIB_CODENAME"
+
+if [ ${DISTRIB_CODENAME} == 'ulyana' ]; then
+	echo $DISTRIB_CODENAME
+	export DISTRIB_CODENAME='focal'
+elif [ ${DISTRIB_CODENAME} == 'tricia' ]; then
+	export DISTRIB_CODENAME='bionic'
+else
+	export DISTRIB_CODENAME=`lsb_release -c -s`
+fi
+
+echo "CodeName AHORA: $DISTRIB_CODENAME"
 
 #Ansible
 echo "Iniciando Ansible Deploy"

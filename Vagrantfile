@@ -12,8 +12,8 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/bionic64"
-  config.vm.box_url = "ubuntu/bionic64"
+  config.vm.box = "ubuntu/focal64"
+  config.vm.box_url = "ubuntu/focal64"
   config.ssh.insert_key = false
   config.vbguest.auto_update = false
   if Vagrant.has_plugin?("vagrant-cachier")
@@ -42,8 +42,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       provisioner.add_host '127.0.0.1', ['desktop01.bydefault-cl.test', 'desktop01', 'ansible']
     end
 
-  master.vm.provision :shell, :inline => "cd /vagrant/"
-  master.vm.provision :shell, :inline => "/vagrant/install.sh"
+  master.vm.provision :shell, :inline => "cd /vagrant && bash install.sh"
+  #master.vm.provision :shell, :inline => "install.sh"
 	#master.vm.provision "shell", path: "install.sh"
   end
 end

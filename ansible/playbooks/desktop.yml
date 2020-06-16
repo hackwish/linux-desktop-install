@@ -10,24 +10,25 @@
     - common-desktop
     - ohmyzsh
     - cloudalchemy.node-exporter
+    - bihealth.python3
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
     # - ngetchell.vscode
     ##- capistrano
     ##- rgibert.valve_steam
-    - geerlingguy.packer
-    - andrewrothstein.vagrant
-    ##- docker
-    - gantsign.minikube
-    - andrewrothstein.kubectl
-    - rke
-    - andrewrothstein.kubernetes-helm
-    - rancher2-cli
-    - kompose-converter
-    - andrewrothstein.terraform
-    #- wtanaka.gcloud_sdk
-    - ibmcloud
-    - azurecli
+    # - geerlingguy.packer
+    # - andrewrothstein.vagrant
+    # ##- docker
+    # - gantsign.minikube
+    # - andrewrothstein.kubectl
+    # - rke
+    # - andrewrothstein.kubernetes-helm
+    # - rancher2-cli
+    # - kompose-converter
+    # - andrewrothstein.terraform
+    # #- wtanaka.gcloud_sdk
+    # - ibmcloud
+    # - azurecli
 
   tasks:
     - name : list users to apply oh-my-zsh
