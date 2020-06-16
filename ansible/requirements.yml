@@ -13,6 +13,9 @@
 - name: bihealth.python3
   src: bihealth.python3
 
+- name: andrewrothstein.vagrant
+  src: andrewrothstein.vagrant
+
 # - name: docker
 #   src: https://github.com/hackwish/ansible-docker.git
 
@@ -25,9 +28,6 @@
 # - name: rancher2-cli
 #   src: https://github.com/hackwish/ansible-rancher2-cli.git
 
-# - name: ohmyzsh
-#   src: https://github.com/hackwish/ansible-ohmyzsh.git
-
 # - name: capistrano
 #   src: https://github.com/hackwish/ansible-capistrano.git
 
@@ -36,9 +36,6 @@
   
 # - name: azurecli
 #   src: https://github.com/hackwish/ansible-role-azurecli.git
-
-# - name: cloudalchemy.node-exporter
-#   src: cloudalchemy.node-exporter
 
 # - name: andrewrothstein.kubernetes-helm
 #   src: andrewrothstein.kubernetes-helm
@@ -67,8 +64,7 @@
 # - name: geerlingguy.packer
 #   src: geerlingguy.packer
 
-# - name: andrewrothstein.vagrant
-#   src: andrewrothstein.vagrant
+
 
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform

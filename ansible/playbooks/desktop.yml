@@ -11,13 +11,13 @@
     - ohmyzsh
     - cloudalchemy.node-exporter
     - bihealth.python3
+    - andrewrothstein.vagrant
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
     # - ngetchell.vscode
     ##- capistrano
     ##- rgibert.valve_steam
     # - geerlingguy.packer
-    # - andrewrothstein.vagrant
     # ##- docker
     # - gantsign.minikube
     # - andrewrothstein.kubectl
