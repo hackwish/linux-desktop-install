@@ -18,9 +18,18 @@ export DISTRIB_CODENAME=`lsb_release -c -s`
 apt-add-repository universe
 apt-add-repository multiverse
 
+# Ubuntu distros
 if [ ${DISTRIB_CODENAME} == 'bionic' ] || [ ${DISTRIB_CODENAME} == 'disco' ] || [ ${DISTRIB_CODENAME} == 'eoan' ]; then
 	echo "Adding Ansible PPA"
    	apt-add-repository --yes ppa:ansible/ansible
+# Linux Mint distros
+elif [ ${DISTRIB_CODENAME} == 'tricia' ] || [ ${DISTRIB_CODENAME} == 'tina' ] || [ ${DISTRIB_CODENAME} == 'tessa' ] || [ ${DISTRIB_CODENAME} == 'tara' ]; then
+	echo "Manual adding Ansible PPA"
+	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" >> /etc/apt/sources.list.d/ansible-ubuntu-ansible-bionic.list
+# ElementaryOS distros
+elif [ ${DISTRIB_CODENAME} == 'hera' ] || [ ${DISTRIB_CODENAME} == 'juno' ]; then
+	echo "Manual adding Ansible PPA"
+	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" >> /etc/apt/sources.list.d/ansible-ubuntu-ansible-bionic.list
 else
 	echo "NOT Adding Ansible PPA"	
 	echo $DISTRIB_CODENAME
@@ -46,9 +55,17 @@ echo "CodeName ANTES: $DISTRIB_CODENAME"
 if [ ${DISTRIB_CODENAME} == 'ulyana' ]; then
 	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='focal'
-elif [ ${DISTRIB_CODENAME} == 'tricia' ]; then
+elif [ ${DISTRIB_CODENAME} == 'odin' ]; then
+	echo $DISTRIB_CODENAME
+	export DISTRIB_CODENAME='focal'
+elif  [ ${DISTRIB_CODENAME} == 'tricia' ] || [ ${DISTRIB_CODENAME} == 'tina' ] || [ ${DISTRIB_CODENAME} == 'tessa' ] || [ ${DISTRIB_CODENAME} == 'tara' ]; then
+	echo $DISTRIB_CODENAME
+	export DISTRIB_CODENAME='bionic'
+elif [ ${DISTRIB_CODENAME} == 'hera' ] || [ ${DISTRIB_CODENAME} == 'juno' ]; then
+	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='bionic'
 else
+	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME=`lsb_release -c -s`
 fi
 
