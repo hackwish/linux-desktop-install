@@ -16,6 +16,15 @@
 - name: andrewrothstein.vagrant
   src: andrewrothstein.vagrant
 
+- name: azure-data-studio
+  src: https://github.com/hackwish/ansible-azure-data-studio.git
+
+- name: grzegorznowak.nvm_node
+  src: grzegorznowak.nvm_node
+
+- name: cloud-sql-proxy
+  src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
+
 # - name: docker
 #   src: https://github.com/hackwish/ansible-docker.git
 

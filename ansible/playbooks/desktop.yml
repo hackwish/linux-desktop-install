@@ -6,12 +6,20 @@
   hosts: desktop
   become: yes
 
+  vars:
+    nvm_install_script_version: "0.33.11"
+    nvm_node_version: "4.1.1"
+    nvm_install_globally: ['peerflix']
+
   roles:
     - common-desktop
     - ohmyzsh
     - cloudalchemy.node-exporter
     - bihealth.python3
     - andrewrothstein.vagrant
+    - azure-data-studio
+    - grzegorznowak.nvm_node
+    - cloud-sql-proxy
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
     # - ngetchell.vscode
