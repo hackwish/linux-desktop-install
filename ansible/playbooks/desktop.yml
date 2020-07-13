@@ -20,7 +20,7 @@
     - azure-data-studio
     - cloud-sql-proxy
     - plank
-    - grzegorznowak.nvm_node
+    # - grzegorznowak.nvm_node
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
     # - ngetchell.vscode
