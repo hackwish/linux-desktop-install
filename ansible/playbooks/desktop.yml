@@ -18,8 +18,9 @@
     - bihealth.python3
     - andrewrothstein.vagrant
     - azure-data-studio
-    - grzegorznowak.nvm_node
     - cloud-sql-proxy
+    - plank
+    - grzegorznowak.nvm_node
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
     # - ngetchell.vscode

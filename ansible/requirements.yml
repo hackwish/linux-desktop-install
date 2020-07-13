@@ -25,6 +25,9 @@
 - name: cloud-sql-proxy
   src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
 
+- name: plank
+  src: https://github.com/hackwish/ansible-plank.git
+
 # - name: docker
 #   src: https://github.com/hackwish/ansible-docker.git
 
