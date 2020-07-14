@@ -28,6 +28,9 @@
 - name: plank
   src: https://github.com/hackwish/ansible-plank.git
 
+- name: andrewrothstein.terraform
+  src: andrewrothstein.terraform
+
 # - name: docker
 #   src: https://github.com/hackwish/ansible-docker.git
 
@@ -75,11 +78,6 @@
 
 # - name: geerlingguy.packer
 #   src: geerlingguy.packer
-
-
-
-# - name: andrewrothstein.terraform
-#   src: andrewrothstein.terraform
 
 # - name: andrelohmann.azurecli
 #   src: andrelohmann.azurecli
