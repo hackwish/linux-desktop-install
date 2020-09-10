@@ -21,6 +21,7 @@
     - azure-data-studio
     - cloud-sql-proxy
     - plank
+    - brew
     # - grzegorznowak.nvm_node
     - andrewrothstein.terraform
     #- suzuki-shunsuke.git-lfs-ubuntu

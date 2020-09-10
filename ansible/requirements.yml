@@ -7,6 +7,9 @@
 - name: ohmyzsh
   src: https://github.com/hackwish/ansible-ohmyzsh.git
 
+- name: brew
+  src: https://github.com/hackwish/ansible-brew.git
+
 - name: cloudalchemy.node-exporter
   src: cloudalchemy.node-exporter
 
