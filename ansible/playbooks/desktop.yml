@@ -7,23 +7,25 @@
   become: yes
 
   vars:
-    nvm_install_script_version: "0.33.11"
-    nvm_node_version: "4.1.1"
-    nvm_install_globally: ['peerflix']
-    terraform_ver: "0.12.20"
+    # nvm_install_script_version: "0.33.11"
+    # nvm_node_version: "4.1.1"
+    # nvm_install_globally: ['peerflix']
+    # terraform_ver: "0.12.20"
 
   roles:
     - common-desktop
     - ohmyzsh
     - cloudalchemy.node-exporter
-    - bihealth.python3
+    # - bihealth.python3
     - andrewrothstein.vagrant
     - azure-data-studio
     - cloud-sql-proxy
     - plank
     - brew
+    - tfswitch
+    #####################
     # - grzegorznowak.nvm_node
-    - andrewrothstein.terraform
+    #- andrewrothstein.terraform
     #- suzuki-shunsuke.git-lfs-ubuntu
     #- gnagano.ansible_gitflow
     # - ngetchell.vscode

@@ -13,8 +13,8 @@
 - name: cloudalchemy.node-exporter
   src: cloudalchemy.node-exporter
 
-- name: bihealth.python3
-  src: bihealth.python3
+# - name: bihealth.python3
+#   src: bihealth.python3
 
 - name: andrewrothstein.vagrant
   src: andrewrothstein.vagrant
@@ -22,8 +22,8 @@
 - name: azure-data-studio
   src: https://github.com/hackwish/ansible-azure-data-studio.git
 
-- name: grzegorznowak.nvm_node
-  src: grzegorznowak.nvm_node
+# - name: grzegorznowak.nvm_node
+#   src: grzegorznowak.nvm_node
 
 - name: cloud-sql-proxy
   src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
@@ -31,8 +31,11 @@
 - name: plank
   src: https://github.com/hackwish/ansible-plank.git
 
-- name: andrewrothstein.terraform
-  src: andrewrothstein.terraform
+- name: tfswitch
+  src: https://github.com/hackwish/ansible-tfswitch.git
+
+# - name: andrewrothstein.terraform
+#   src: andrewrothstein.terraform
 
 # - name: docker
 #   src: https://github.com/hackwish/ansible-docker.git
