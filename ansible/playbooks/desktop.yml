@@ -23,6 +23,7 @@
     - plank
     - brew
     - tfswitch
+    - terragrunt
     #####################
     # - grzegorznowak.nvm_node
     #- andrewrothstein.terraform

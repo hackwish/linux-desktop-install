@@ -34,6 +34,9 @@
 - name: tfswitch
   src: https://github.com/hackwish/ansible-tfswitch.git
 
+- name: terragrunt
+  src: https://github.com/hackwish/ansible-terragrunt.git
+
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 
