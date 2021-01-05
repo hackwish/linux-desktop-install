@@ -51,16 +51,17 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-co
 
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
-
-if [ ${DISTRIB_CODENAME} == 'ulyana' ]; then
-	echo $DISTRIB_CODENAME
-	export DISTRIB_CODENAME='focal'
-elif [ ${DISTRIB_CODENAME} == 'odin' ]; then
+# Linux Mint distros
+if [ ${DISTRIB_CODENAME} == 'ulyana' ] || [ ${DISTRIB_CODENAME} == 'ulyssa' ]; then
 	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='focal'
 elif  [ ${DISTRIB_CODENAME} == 'tricia' ] || [ ${DISTRIB_CODENAME} == 'tina' ] || [ ${DISTRIB_CODENAME} == 'tessa' ] || [ ${DISTRIB_CODENAME} == 'tara' ]; then
 	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='bionic'
+# ElementaryOS distros
+elif [ ${DISTRIB_CODENAME} == 'odin' ]; then
+	echo $DISTRIB_CODENAME
+	export DISTRIB_CODENAME='focal'
 elif [ ${DISTRIB_CODENAME} == 'hera' ] || [ ${DISTRIB_CODENAME} == 'juno' ]; then
 	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='bionic'
@@ -81,7 +82,12 @@ ANSIBLE_CUSTOM_DIR=`pwd`
 echo "Descargando requirements"
 ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
+echo "instalando colecciones"
+ansible-galaxy collection install ansible.posix
+ansible-galaxy collection install community.docker
+ansible-galaxy collection install community.sops
+
 echo "Comienza Deployment con Ansible"
-ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml
+ansible-playbook -vvv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml
 
 echo "TODO LISTO!!"

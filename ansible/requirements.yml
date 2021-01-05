@@ -37,6 +37,9 @@
 - name: terragrunt
   src: https://github.com/hackwish/ansible-terragrunt.git
 
+- name: andrewrothstein.sops
+  src: andrewrothstein.sops
+
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 
