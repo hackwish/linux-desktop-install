@@ -86,8 +86,9 @@ echo "instalando colecciones"
 ansible-galaxy collection install ansible.posix
 ansible-galaxy collection install community.docker
 ansible-galaxy collection install community.sops
+ansible-galaxy collection install community.general
 
 echo "Comienza Deployment con Ansible"
-ansible-playbook -vvv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml
+ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml
 
 echo "TODO LISTO!!"
