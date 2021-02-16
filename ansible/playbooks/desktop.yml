@@ -46,6 +46,20 @@
     # - azurecli
 
   tasks:
+    - name: Remove swapfile from /etc/fstab
+      mount:
+        name: "{{ item }}"
+        fstype: swap
+        state: absent
+      with_items:
+        - swap
+        - none
+      when: ansible_memory_mb['real']['total'] | int >= 16384
+
+    - name: Disable swap
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0 and ansible_memory_mb['real']['total'] | int >= 16384
+
     - name : list users to apply oh-my-zsh
       shell: "getent passwd | awk -F: '$3 > 999 {print $1}'"
       register: users
