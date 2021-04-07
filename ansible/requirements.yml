@@ -10,8 +10,11 @@
 - name: brew
   src: https://github.com/hackwish/ansible-brew.git
 
-- name: cloudalchemy.node-exporter
-  src: cloudalchemy.node-exporter
+#- name: cloudalchemy.node-exporter
+#  src: cloudalchemy.node-exporter
+
+- name: netdata
+  src: https://github.com/hackwish/ansible-netdata.git
 
 - name: bihealth.python3
   src: bihealth.python3
