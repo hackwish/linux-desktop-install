@@ -16,7 +16,8 @@
     - bihealth.python3
     - common-desktop
     - ohmyzsh
-    - netdata
+    - cloudalchemy.node-exporter
+    # - netdata
     - andrewrothstein.vagrant
     - azure-data-studio
     - cloud-sql-proxy
