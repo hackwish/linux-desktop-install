@@ -1,13 +1,15 @@
 # desktop-install
-This repo, use Ansible as configuration mgmt for desktop intallation. 
+This repo, use Ansible as configuration mgmt for Linux desktop intallation. 
 
 ## Tested
 ### Main Branch
-- Ubuntu 18.04 LTS (bionic)
-- Linux Mint 19.x
-- Pop Os 18.04 LTS
+- Ubuntu
+- Linux Mint
+- Pop!_Os
+- Elementary OS
 
 ## ToDo
-- Linux Red Hat based
-- Mac
-- Windows(?)
+- RHEL based
+- Arch based
+- Debian direct based
+
