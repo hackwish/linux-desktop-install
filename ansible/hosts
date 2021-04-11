@@ -4,3 +4,10 @@
 [desktop:vars]
 ansible_connection=local
 ansible_user=root
+
+[devops]
+127.0.0.1
+
+[devops:vars]
+ansible_connection=local
+ansible_user=root

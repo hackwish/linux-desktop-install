@@ -18,6 +18,8 @@ export DISTRIB_CODENAME=`lsb_release -c -s`
 apt-add-repository universe
 apt-add-repository multiverse
 
+echo "Vamos a verificar si tiene Ansible y que distribución usas..."
+
 # Ubuntu distros
 if [ ${DISTRIB_CODENAME} == 'bionic' ] || [ ${DISTRIB_CODENAME} == 'disco' ] || [ ${DISTRIB_CODENAME} == 'eoan' ]; then
 	echo "Adding Ansible PPA"
@@ -48,6 +50,8 @@ apt-get install -y curl \
 		apt-transport-https
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
+
+echo "Ahora vamos a adecuar la instalación..."
 
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
@@ -88,7 +92,34 @@ ansible-galaxy collection install community.docker
 ansible-galaxy collection install community.sops
 ansible-galaxy collection install community.general
 
+
 echo "Comienza Deployment con Ansible"
-ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml
+echo "Opciones de Instalación: "
+
+OPCIONES="desktop devops salir"
+
+PS3="Selecciona una opción: " 
+
+select installer in $OPCIONES;
+do
+  case $installer in
+	desktop)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/desktop.yml
+        break
+		;;
+	devops)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/devops.yml
+        break
+		;;
+    salir) 
+        break
+        ;; 
+    *) 
+        echo "$REPLY no es una opción válida" 
+        ;; 
+  esac
+done
 
 echo "TODO LISTO!!"

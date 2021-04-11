@@ -43,6 +43,9 @@
 - name: andrewrothstein.sops
   src: andrewrothstein.sops
 
+- name: droidcam
+  src: https://github.com/hackwish/ansible-droidcam.git
+
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 

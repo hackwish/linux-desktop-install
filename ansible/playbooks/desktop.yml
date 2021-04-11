@@ -1,76 +1,11 @@
 ---
-# - name: Run common
-#   import_playbook: common.yml
+- name: Run common
+  import_playbook: common.yml
 
-- name: Deploy Desktop with Ansible
+- name: Deploy Common Linux Desktop with Ansible
   hosts: desktop
   become: yes
 
   vars:
-    # nvm_install_script_version: "0.33.11"
-    # nvm_node_version: "4.1.1"
-    # nvm_install_globally: ['peerflix']
-    # terraform_ver: "0.12.20"
 
   roles:
-    - bihealth.python3
-    - common-desktop
-    - ohmyzsh
-    - cloudalchemy.node-exporter
-    # - netdata
-    - andrewrothstein.vagrant
-    - azure-data-studio
-    - cloud-sql-proxy
-    - plank
-    - brew
-    - tfswitch
-    - terragrunt
-    - andrewrothstein.sops
-    #####################
-    # - grzegorznowak.nvm_node
-    #- andrewrothstein.terraform
-    #- suzuki-shunsuke.git-lfs-ubuntu
-    #- gnagano.ansible_gitflow
-    # - ngetchell.vscode
-    ##- capistrano
-    ##- rgibert.valve_steam
-    # - geerlingguy.packer
-    # ##- docker
-    # - gantsign.minikube
-    # - andrewrothstein.kubectl
-    # - rke
-    # - andrewrothstein.kubernetes-helm
-    # - rancher2-cli
-    # - kompose-converter
-    # #- wtanaka.gcloud_sdk
-    # - ibmcloud
-    # - azurecli
-
-  tasks:
-    - name: Remove swapfile from /etc/fstab
-      mount:
-        name: "{{ item }}"
-        fstype: swap
-        state: absent
-      with_items:
-        - swap
-        - none
-      when: ansible_memory_mb['real']['total'] | int >= 16384
-
-    - name: Disable swap
-      command: swapoff -a
-      when: ansible_swaptotal_mb > 0 and ansible_memory_mb['real']['total'] | int >= 16384
-
-    - name : list users to apply oh-my-zsh
-      shell: "getent passwd | awk -F: '$3 > 999 {print $1}'"
-      register: users
-
-    - name: Reload Font cache
-      shell: fc-cache -fv
-
-    - name: Config git user
-      shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}"
-      with_items: "{{ users.stdout_lines }}"
-
-    - name: Fix Docker execution without sudo #Issue #7
-      shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"
