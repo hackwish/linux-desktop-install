@@ -47,7 +47,8 @@ apt-get install -y curl \
 		rsync \
 		git \
 		software-properties-common \
-		apt-transport-https
+		apt-transport-https \
+		python3-pip
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
@@ -96,7 +97,7 @@ ansible-galaxy collection install community.general
 echo "Comienza Deployment con Ansible"
 echo "Opciones de Instalación: "
 
-OPCIONES="desktop devops salir"
+OPCIONES="desktop devops tv salir"
 
 PS3="Selecciona una opción: " 
 
@@ -111,6 +112,11 @@ do
 	devops)
 		echo "Se inicia la instalación de $installer"
 		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/devops.yml
+        break
+		;;
+	tv)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/tv.yml
         break
 		;;
     salir) 

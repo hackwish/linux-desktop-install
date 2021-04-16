@@ -3,12 +3,10 @@
 
   roles:
     - bihealth.python3
-    - common-desktop
+    - common
     - ohmyzsh
     - cloudalchemy.node-exporter
     # - netdata
-    - plank
-    - droidcam
   become: yes
 
   tasks:

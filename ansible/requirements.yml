@@ -1,4 +1,6 @@
 ---
+- name: common
+  src: https://github.com/hackwish/ansible-common.git
 
 - name: common-desktop
   src: https://github.com/hackwish/ansible-common-desktop.git

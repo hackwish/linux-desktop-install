@@ -9,6 +9,4 @@
   vars:
 
   roles:
-    - common-desktop
     - plank
-    - droidcam
