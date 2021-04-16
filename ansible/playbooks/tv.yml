@@ -2,7 +2,7 @@
 - name: Run common
   import_playbook: common.yml
 
-- name: Deploy Common Linux Desktop with Ansible
+- name: Deploy TV Linux Desktop with Ansible
   hosts: desktop
   become: yes
 

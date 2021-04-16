@@ -3,10 +3,10 @@
 
   roles:
     - bihealth.python3
-    - common
     - ohmyzsh
     - cloudalchemy.node-exporter
     # - netdata
+    - common
   become: yes
 
   tasks:
