@@ -48,7 +48,15 @@ apt-get install -y curl \
 		git \
 		software-properties-common \
 		apt-transport-https \
-		python3-pip
+		python3-pip \
+		libwxgtk3.0-gtk3-0v5
+
+# Temporal Modprobe fix
+modprobe ip_conntrack
+
+# Fix WoeUSB
+wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
+dpkg -i libwxgtk*_amd64.deb
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
