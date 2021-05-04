@@ -57,6 +57,7 @@ modprobe ip_conntrack
 # Fix WoeUSB
 wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
 dpkg -i libwxgtk*_amd64.deb
+rm -rf libwxgtk*
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
