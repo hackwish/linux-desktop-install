@@ -6,6 +6,9 @@
   src: https://github.com/hackwish/ansible-common-desktop.git
   # version: ubuntu-2004
 
+- name: common-devops-desktop
+  src: https://github.com/hackwish/ansible-common-devops-desktop.git
+
 - name: ohmyzsh
   src: https://github.com/hackwish/ansible-ohmyzsh.git
 
