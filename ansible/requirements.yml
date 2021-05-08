@@ -51,6 +51,9 @@
 - name: droidcam
   src: https://github.com/hackwish/ansible-droidcam.git
 
+- name: anydesk
+  src: https://github.com/hackwish/ansible-anydesk.git
+
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 
