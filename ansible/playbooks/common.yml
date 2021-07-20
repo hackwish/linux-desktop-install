@@ -2,7 +2,7 @@
   hosts: all
 
   roles:
-    - bihealth.python3
+    # - bihealth.python3
     - ohmyzsh
     - cloudalchemy.node-exporter
     # - netdata
