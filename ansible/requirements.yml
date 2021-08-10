@@ -72,11 +72,11 @@
 # - name: capistrano
 #   src: https://github.com/hackwish/ansible-capistrano.git
 
-# - name: ibmcloud
-#   src: https://github.com/hackwish/ansible-ibmcloud.git
+- name: ibmcloud
+  src: https://github.com/hackwish/ansible-ibmcloud.git
   
-# - name: azurecli
-#   src: https://github.com/hackwish/ansible-role-azurecli.git
+- name: azurecli
+  src: https://github.com/hackwish/ansible-role-azurecli.git
 
 # - name: andrewrothstein.kubernetes-helm
 #   src: andrewrothstein.kubernetes-helm

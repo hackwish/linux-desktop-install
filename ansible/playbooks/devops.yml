@@ -42,8 +42,8 @@
     # - rancher2-cli
     # - kompose-converter
     # #- wtanaka.gcloud_sdk
-    # - ibmcloud
-    # - azurecli
+    - ibmcloud
+    - azurecli
 
   tasks:
     - name: Config git user
