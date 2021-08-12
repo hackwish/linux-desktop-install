@@ -44,6 +44,9 @@
     # #- wtanaka.gcloud_sdk
     - ibmcloud
     - azurecli
+    - kops
+    - k3d
+    - tfenv
 
   tasks:
     - name: Config git user

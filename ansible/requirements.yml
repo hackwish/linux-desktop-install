@@ -78,6 +78,15 @@
 - name: azurecli
   src: https://github.com/hackwish/ansible-role-azurecli.git
 
+- name: kops
+  src: https://github.com/hackwish/ansible-kops.git
+
+- name: k3d
+  src: https://github.com/hackwish/ansible-k3d.git
+
+- name: tfenv
+  src: https://github.com/hackwish/ansible-tfenv.git
+
 # - name: andrewrothstein.kubernetes-helm
 #   src: andrewrothstein.kubernetes-helm
 
