@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '14.17'
       - name: Install dependencies
-        run: npm ci
+        run: npm install @semantic-release/github
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
