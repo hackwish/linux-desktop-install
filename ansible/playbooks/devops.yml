@@ -47,10 +47,15 @@
     - kops
     - k3d
     - tfenv
+    - terraformer
+    - istioctlenv
+    - cf-terraforming
+    - velero-io
+    - fesaille.gh
 
   tasks:
     - name: Config git user
-      shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}"
+      shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main
       with_items: "{{ users.stdout_lines }}"
 
     - name: Fix Docker execution without sudo #Issue #7

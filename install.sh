@@ -48,6 +48,8 @@ apt-get install -y curl \
 		git \
 		software-properties-common \
 		apt-transport-https \
+		python-apt \
+		python3-minimal \
 		python3-pip \
 		libwxgtk3.0-gtk3-0v5
 
@@ -120,7 +122,7 @@ do
 		;;
 	devops)
 		echo "Se inicia la instalación de $installer"
-		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/devops.yml
+		ansible-playbook -vvv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/devops.yml
         break
 		;;
 	tv)

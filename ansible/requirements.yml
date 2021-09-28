@@ -6,6 +6,9 @@
   src: https://github.com/hackwish/ansible-common-desktop.git
   # version: ubuntu-2004
 
+- name: common-server
+  src: https://github.com/hackwish/ansible-common-server.git
+
 - name: common-devops-desktop
   src: https://github.com/hackwish/ansible-common-devops-desktop.git
 
@@ -86,6 +89,21 @@
 
 - name: tfenv
   src: https://github.com/hackwish/ansible-tfenv.git
+
+- name: terraformer
+  src: https://github.com/hackwish/ansible-terraformer.git
+
+- name: istioctlenv
+  src: https://github.com/hackwish/ansible-istioctlenv.git
+
+- name: cf-terraforming
+  src: https://github.com/hackwish/ansible-cf-terraforming.git
+
+- name: velero-io
+  src: https://github.com/hackwish/ansible-velero-io.git
+
+- name: fesaille.gh
+  src: fesaille.gh
 
 # - name: andrewrothstein.kubernetes-helm
 #   src: andrewrothstein.kubernetes-helm

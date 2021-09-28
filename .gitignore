@@ -24,3 +24,4 @@ ansible/roles/*
 ansible/vault_password
 *.deb
 .csm*
+velero
