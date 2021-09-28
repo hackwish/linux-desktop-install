@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: '14.17'
       - name: Install dependencies
-        run: npm install @semantic-release/github
+        run: npm install @semantic-release/github @semantic-release/changelog
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
