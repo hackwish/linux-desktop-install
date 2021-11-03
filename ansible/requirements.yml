@@ -57,6 +57,9 @@
 - name: anydesk
   src: https://github.com/hackwish/ansible-anydesk.git
 
+- name: terraform-docs
+  src: https://github.com/hackwish/ansible-terraform-docs.git
+
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 

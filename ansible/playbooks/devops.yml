@@ -42,7 +42,7 @@
     # - rancher2-cli
     # - kompose-converter
     # #- wtanaka.gcloud_sdk
-    - ibmcloud
+    # - ibmcloud
     - azurecli
     - kops
     - k3d
@@ -52,6 +52,7 @@
     - cf-terraforming
     - velero-io
     - fesaille.gh
+    - terraform-docs
 
   tasks:
     - name: Config git user
