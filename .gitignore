@@ -25,3 +25,4 @@ ansible/vault_password
 *.deb
 .csm*
 velero
+CHANGELOG.md
