@@ -108,7 +108,7 @@ ansible-galaxy collection install community.general
 echo "Comienza Deployment con Ansible"
 echo "Opciones de Instalación: "
 
-OPCIONES="desktop devops tv salir"
+OPCIONES="desktop devops tv pi salir"
 
 PS3="Selecciona una opción: " 
 
@@ -128,6 +128,11 @@ do
 	tv)
 		echo "Se inicia la instalación de $installer"
 		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/tv.yml
+        break
+		;;
+	pi)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/pi.yml
         break
 		;;
     salir) 

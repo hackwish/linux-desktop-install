@@ -1,0 +1,13 @@
+---
+- name: Run common
+  import_playbook: common.yml
+
+- name: Deploy pi device with Ansible
+  hosts: pi
+  become: yes
+
+  vars:
+
+  # roles:
+  #   - ohmyzsh
+  #   - cloudalchemy.node-exporter
