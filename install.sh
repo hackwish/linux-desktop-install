@@ -42,24 +42,14 @@ echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade && apt-get -y --force-yes dist-upgrade
 
 echo "Instalando dependencias previas"
-apt-get install -y curl \
-		wget \
-		rsync \
-		git \
-		software-properties-common \
-		apt-transport-https \
-		python-apt \
-		python3-minimal \
-		python3-pip \
-		libwxgtk3.0-gtk3-0v5
 
 # Temporal Modprobe fix
 modprobe ip_conntrack
 
 # Fix WoeUSB
-wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
-dpkg -i libwxgtk*_amd64.deb
-rm -rf libwxgtk*
+# wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
+# dpkg -i libwxgtk*_amd64.deb
+# rm -rf libwxgtk*
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
