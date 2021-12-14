@@ -53,7 +53,7 @@
     - velero-io
     - fesaille.gh
     - terraform-docs
-    - anbox
+    # - anbox
 
   tasks:
     - name: Config git user
