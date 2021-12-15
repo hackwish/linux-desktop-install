@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/hackwish/linux-desktop-install/compare/v1.2.3...v1.2.4) (2021-12-15)
+
+
+### Bug Fixes
+
+* **ansible:** fix install script for PI ([b20cf66](https://github.com/hackwish/linux-desktop-install/commit/b20cf66bca4b8a8fc15f557014d37e692d83d89c))
+
 ## [1.2.3](https://github.com/hackwish/linux-desktop-install/compare/v1.2.2...v1.2.3) (2021-12-14)
 
 
