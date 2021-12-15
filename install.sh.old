@@ -13,7 +13,6 @@ which lsb_release && apt-get --yes install lsb-release
 
 # Load up the release information
 export DISTRIB_CODENAME=`lsb_release -c -s`
-export ARCHITECTURE=`uname -a | awk '{print $13}'`
 # DISTRIB_CODENAME=`lsb_release -c -s`
 
 apt-add-repository universe
@@ -38,32 +37,29 @@ else
 	echo $DISTRIB_CODENAME
 fi
 
+
 echo "Actualizando el sistema..."
-apt-get update && apt-get -y --force-yes upgrade
+apt-get update && apt-get -y --force-yes upgrade && apt-get -y --force-yes dist-upgrade
 
 echo "Instalando dependencias previas"
-apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python-apt python3-minimal python3-pip
+apt-get install -y curl \
+		wget \
+		rsync \
+		git \
+		software-properties-common \
+		apt-transport-https \
+		python-apt \
+		python3-minimal \
+		python3-pip \
+		libwxgtk3.0-gtk3-0v5
 
-echo "Tu arquitectura es ${ARCHITECTURE}"
+# Temporal Modprobe fix
+modprobe ip_conntrack
 
-if ${ARCHITECTURE} == 'aarch64'; then 
-
-	echo "Quitemos lo innecesario..."
-	apt-get remove --purge triggerhappy anacron logrotate dphys-swapfile xserver-common lightdm
-	systemctl disable x11-common
-	systemctl disable bootlogs
-	systemctl disable console-setup
-	apt-get install busybox-syslogd
-	dpkg --purge rsyslog
-else  
-	# Temporal Modprobe fix
-	modprobe ip_conntrack
-
-	# Fix WoeUSB
-	wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
-	dpkg -i libwxgtk*_amd64.deb
-	rm -rf libwxgtk*
-fi
+# Fix WoeUSB
+wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
+dpkg -i libwxgtk*_amd64.deb
+rm -rf libwxgtk*
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
 
@@ -112,7 +108,7 @@ ansible-galaxy collection install community.general
 echo "Comienza Deployment con Ansible"
 echo "Opciones de Instalación: "
 
-OPCIONES="desktop devops tv pi salir"
+OPCIONES="desktop devops tv salir"
 
 PS3="Selecciona una opción: " 
 
@@ -132,11 +128,6 @@ do
 	tv)
 		echo "Se inicia la instalación de $installer"
 		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/tv.yml
-        break
-		;;
-	pi)
-		echo "Se inicia la instalación de $installer"
-		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/pi.yml
         break
 		;;
     salir) 
