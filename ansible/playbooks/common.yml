@@ -54,3 +54,4 @@
 
     - name: Reload Font cache
       shell: fc-cache -fv
+      when: ansible_architecture == "x86_64" 
