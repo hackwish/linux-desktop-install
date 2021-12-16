@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/hackwish/linux-desktop-install/compare/v1.2.7...v1.2.8) (2021-12-16)
+
+
+### Bug Fixes
+
+* **ansible:** add arch condtion on Reload Font cache ([aabfa61](https://github.com/hackwish/linux-desktop-install/commit/aabfa61cf920b6d5fc0dcad7d0bb015ed32f45f4))
+
 ## [1.2.7](https://github.com/hackwish/linux-desktop-install/compare/v1.2.6...v1.2.7) (2021-12-16)
 
 
