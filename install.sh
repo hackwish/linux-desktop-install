@@ -46,8 +46,7 @@ apt-get install --no-install-recommends -y curl wget rsync git software-properti
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
-if ${ARCHITECTURE} == 'aarch64'; then 
-
+if [ ${ARCHITECTURE} == 'aarch64' ]; then
 	echo "Quitemos lo innecesario..."
 	apt-get remove --purge triggerhappy anacron logrotate dphys-swapfile xserver-common lightdm
 	systemctl disable x11-common
@@ -58,7 +57,6 @@ if ${ARCHITECTURE} == 'aarch64'; then
 else  
 	# Temporal Modprobe fix
 	modprobe ip_conntrack
-
 	# Fix WoeUSB
 	wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
 	dpkg -i libwxgtk*_amd64.deb
