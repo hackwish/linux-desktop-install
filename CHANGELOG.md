@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/hackwish/linux-desktop-install/compare/v1.3.2...v1.3.3) (2021-12-16)
+
+
+### Bug Fixes
+
+* **installer:** clean mac_installer ([8d6970d](https://github.com/hackwish/linux-desktop-install/commit/8d6970d24dd32cd8c7753b40d04fa1795b1d0249))
+
 ## [1.3.2](https://github.com/hackwish/linux-desktop-install/compare/v1.3.1...v1.3.2) (2021-12-16)
 
 
