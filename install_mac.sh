@@ -48,27 +48,27 @@ append_to_zshrc 'export PATH="$HOME/.bin:$PATH"'
 
 HOMEBREW_PREFIX="/usr/local"
 
-if [ -d "$HOMEBREW_PREFIX" ]; then
-  if ! [ -r "$HOMEBREW_PREFIX" ]; then
-    sudo chown -R "$LOGNAME:admin" /usr/local
-  fi
-else
-  sudo mkdir "$HOMEBREW_PREFIX"
-  sudo chflags norestricted "$HOMEBREW_PREFIX"
-  sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
-fi
+# if [ -d "$HOMEBREW_PREFIX" ]; then
+#   if ! [ -r "$HOMEBREW_PREFIX" ]; then
+#     sudo chown -R "$LOGNAME:admin" /usr/local
+#   fi
+# else
+#   sudo mkdir "$HOMEBREW_PREFIX"
+#   sudo chflags norestricted "$HOMEBREW_PREFIX"
+#   sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
+# fi
 
-update_shell() {
-  local shell_path;
-  shell_path="$(command -v zsh)"
+# update_shell() {
+#   local shell_path;
+#   shell_path="$(command -v zsh)"
 
-  fancy_echo "Changing your shell to zsh ..."
-  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
-    fancy_echo "Adding '$shell_path' to /etc/shells"
-    sudo sh -c "echo $shell_path >> /etc/shells"
-  fi
-  sudo chsh -s "$shell_path" "$USER"
-}
+#   fancy_echo "Changing your shell to zsh ..."
+#   if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+#     fancy_echo "Adding '$shell_path' to /etc/shells"
+#     sudo sh -c "echo $shell_path >> /etc/shells"
+#   fi
+#   sudo chsh -s "$shell_path" "$USER"
+# }
 
 case "$SHELL" in
   */zsh)
