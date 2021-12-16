@@ -81,18 +81,21 @@ HOMEBREW_PREFIX="/usr/local"
 #     ;;
 # esac
 
-gem_install_or_update() {
-  if gem list "$1" --installed > /dev/null; then
-    gem update "$@"
-  else
-    gem install "$@"
-  fi
-}
+# gem_install_or_update() {
+#   if gem list "$1" --installed > /dev/null; then
+#     gem update "$@"
+#   else
+#     gem install "$@"
+#   fi
+# }
 
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
-    curl -fsS \
-      'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+git clone https://github.com/Homebrew/brew homebrew
+eval "$(homebrew/bin/brew shellenv)"
+
+    # curl -fsS \
+    #   'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
 
     append_to_zshrc '# recommended by brew doctor'
 
@@ -103,13 +106,14 @@ if ! command -v brew >/dev/null; then
     export PATH="/usr/local/bin:$PATH"
 fi
 
-if brew list --formula | grep -Fq brew-cask; then
-  fancy_echo "Uninstalling old Homebrew-Cask ..."
-  brew uninstall --force brew-cask
-fi
+# if brew list --formula | grep -Fq brew-cask; then
+#   fancy_echo "Uninstalling old Homebrew-Cask ..."
+#   brew uninstall --force brew-cask
+# fi
 
 fancy_echo "Updating Homebrew formulae ..."
-brew update --force # https://github.com/Homebrew/brew/issues/1151
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
@@ -177,15 +181,15 @@ fi
 
 sed -i -e 's/plugins=(git)/plugins=(git asdf rails bundler ruby)/g' ~/.zshrc
 
-if ! [ -f ~/Library/Fonts/Roboto\ Mono\ for\ Powerline.ttf ]
-then
-  fancy_echo "Installing Powerline fonts"
-    git clone https://github.com/powerline/fonts
-    # install
-    ./fonts/install.sh
-    # clean-up a bit
-    rm -rf fonts
-fi
+# if ! [ -f ~/Library/Fonts/Roboto\ Mono\ for\ Powerline.ttf ]
+# then
+#   fancy_echo "Installing Powerline fonts"
+#     git clone https://github.com/powerline/fonts
+#     # install
+#     ./fonts/install.sh
+#     # clean-up a bit
+#     rm -rf fonts
+# fi
 
 # Custom oh-my-zsh theme
 sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="pygmalion"/g' ~/.zshrc
@@ -199,14 +203,14 @@ if [[ $(cat ~/.zshrc | grep 'NVM_DIR') == "" ]]; then
 EOT
 fi
 
-if [[ $(cat ~/.zshrc | grep 'LC_ALL') == "" ]]; then
-  cat <<EOT >> ~/.zshrc
-  # Add custom LANG configs for Fastlane
-  export LC_ALL=en_US.UTF-8
-  export LANG=en_US.UTF-8
-  export LANGUAGE=en_US.UTF-8
-EOT
-fi
+# if [[ $(cat ~/.zshrc | grep 'LC_ALL') == "" ]]; then
+#   cat <<EOT >> ~/.zshrc
+#   # Add custom LANG configs for Fastlane
+#   export LC_ALL=en_US.UTF-8
+#   export LANG=en_US.UTF-8
+#   export LANGUAGE=en_US.UTF-8
+# EOT
+# fi
 
 # Fix oh-my-zsh permissions issue
 # chmod -R 644 /usr/local/share/zsh
