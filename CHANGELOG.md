@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/hackwish/linux-desktop-install/compare/v1.2.6...v1.2.7) (2021-12-16)
+
+
+### Bug Fixes
+
+* **script:** add -y condition on busybox-syslogsd ([7cd850f](https://github.com/hackwish/linux-desktop-install/commit/7cd850f95f832169b2c35e397828766453a59197))
+
 ## [1.2.6](https://github.com/hackwish/linux-desktop-install/compare/v1.2.5...v1.2.6) (2021-12-16)
 
 
