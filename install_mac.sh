@@ -70,16 +70,16 @@ HOMEBREW_PREFIX="/usr/local"
 #   sudo chsh -s "$shell_path" "$USER"
 # }
 
-case "$SHELL" in
-  */zsh)
-    if [ "$(command -v zsh)" != '/usr/local/bin/zsh' ] ; then
-      update_shell
-    fi
-    ;;
-  *)
-    update_shell
-    ;;
-esac
+# case "$SHELL" in
+#   */zsh)
+#     if [ "$(command -v zsh)" != '/usr/local/bin/zsh' ] ; then
+#       update_shell
+#     fi
+#     ;;
+#   *)
+#     update_shell
+#     ;;
+# esac
 
 gem_install_or_update() {
   if gem list "$1" --installed > /dev/null; then
