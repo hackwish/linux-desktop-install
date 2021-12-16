@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/hackwish/linux-desktop-install/compare/v1.2.8...v1.3.0) (2021-12-16)
+
+
+### Features
+
+* **installer:** add initial script for mac installer ([e883dbb](https://github.com/hackwish/linux-desktop-install/commit/e883dbbe9fac57fa729fa2bde1e8b51abe253e7b))
+
 ## [1.2.8](https://github.com/hackwish/linux-desktop-install/compare/v1.2.7...v1.2.8) (2021-12-16)
 
 
