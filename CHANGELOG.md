@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/hackwish/linux-desktop-install/compare/v1.3.0...v1.3.1) (2021-12-16)
+
+
+### Bug Fixes
+
+* **installer:** disable admin level actions mac installer ([6065212](https://github.com/hackwish/linux-desktop-install/commit/60652124e80866b7a2470d2ac24cc8737669675a))
+
 # [1.3.0](https://github.com/hackwish/linux-desktop-install/compare/v1.2.8...v1.3.0) (2021-12-16)
 
 
