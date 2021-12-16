@@ -52,7 +52,7 @@ if [ ${ARCHITECTURE} == 'aarch64' ]; then
 	systemctl disable x11-common
 	systemctl disable bootlogs
 	systemctl disable console-setup
-	apt-get install busybox-syslogd
+	apt-get install -y busybox-syslogd
 	dpkg --purge rsyslog
 else  
 	# Temporal Modprobe fix
