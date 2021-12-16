@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/hackwish/linux-desktop-install/compare/v1.2.4...v1.2.5) (2021-12-16)
+
+
+### Bug Fixes
+
+* **ansible:** fix install script ([ee409fc](https://github.com/hackwish/linux-desktop-install/commit/ee409fc71e7a605f3224bdca057d0076b6a16c34))
+
 ## [1.2.4](https://github.com/hackwish/linux-desktop-install/compare/v1.2.3...v1.2.4) (2021-12-15)
 
 
