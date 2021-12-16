@@ -48,7 +48,7 @@ echo "Tu arquitectura es ${ARCHITECTURE}"
 
 if [ ${ARCHITECTURE} == 'aarch64' ]; then
 	echo "Quitemos lo innecesario..."
-	apt-get remove --purge triggerhappy anacron logrotate dphys-swapfile xserver-common lightdm
+	apt-get remove --purge -y triggerhappy anacron logrotate dphys-swapfile xserver-common lightdm
 	systemctl disable x11-common
 	systemctl disable bootlogs
 	systemctl disable console-setup
