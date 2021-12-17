@@ -1,5 +1,5 @@
 - name: Deploy MAC DevOps Machine with Ansible
-  hosts: macos
+  hosts: desktop
   become: false
 
   vars:

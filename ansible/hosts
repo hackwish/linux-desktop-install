@@ -11,3 +11,16 @@ ansible_user=root
 [devops:vars]
 ansible_connection=local
 ansible_user=root
+
+[mac]
+127.0.0.1
+
+[mac:vars]
+ansible_connection=local
+
+[pi]
+127.0.0.1
+
+[pi:vars]
+ansible_connection=local
+ansible_user=root
