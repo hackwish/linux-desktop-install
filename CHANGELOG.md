@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/hackwish/linux-desktop-install/compare/v1.3.4...v1.4.0) (2021-12-17)
+
+
+### Features
+
+* **installer:** update mac_install script. Add alpha installer integrator ([89c7abb](https://github.com/hackwish/linux-desktop-install/commit/89c7abbf0a6a214e9a083c2ad75445bf7a8dfae3))
+
 ## [1.3.4](https://github.com/hackwish/linux-desktop-install/compare/v1.3.3...v1.3.4) (2021-12-17)
 
 
