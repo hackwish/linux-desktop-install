@@ -12,6 +12,9 @@
 - name: common-devops-desktop
   src: https://github.com/hackwish/ansible-common-devops-desktop.git
 
+- name: common-mac
+  src: https://github.com/hackwish/ansible-common-mac.git
+
 - name: ohmyzsh
   src: https://github.com/hackwish/ansible-ohmyzsh.git
 
