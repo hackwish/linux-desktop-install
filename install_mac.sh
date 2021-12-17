@@ -240,3 +240,34 @@ ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
 # echo "Comienza Deployment con Ansible"
 # ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/mac.yml
+
+echo "Comienza Deployment con Ansible"
+echo "Opciones de Instalación: "
+
+OPCIONES="desktop devops salir"
+
+PS3="Selecciona una opción: " 
+
+select installer in $OPCIONES;
+do
+  case $installer in
+	desktop)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/mac-desktop.yml
+        break
+		;;
+	devops)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vvv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/mac-devops.yml
+        break
+		;;
+    salir) 
+        break
+        ;; 
+    *) 
+        echo "$REPLY no es una opción válida" 
+        ;; 
+  esac
+done
+
+echo "TODO LISTO!!"

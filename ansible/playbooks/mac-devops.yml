@@ -1,0 +1,14 @@
+- name: Deploy MAC DevOps Machine with Ansible
+  hosts: macos
+  become: false
+
+  vars:
+    # ohmyzsh_folders:
+    #   - "/usr/local/share/zsh"
+    #   - "/usr/local/share/zsh/site-functions"
+
+  roles:
+    - common-mac
+    # - common-devops-mac
+
+  tasks:

@@ -3,7 +3,6 @@
 
 echo ""
 echo "Bienvenid@ a ByDefault Asimilation"
-echo ""
 echo "
 ==============================
 | ...Resistance is Futile... |
@@ -17,7 +16,9 @@ OS=`uname`
 if [[ $OS == "Darwin" ]]; then
     echo $OS
     echo "Es una máquina macOS!!"
-    read -p "..Black Alert!. Presiona Enter para comenzar..."
+    echo ""
+    read -p "..Black Alert!...Presiona Enter para comenzar..."
+    echo ""
     function mac () {
         source install_mac.sh
     }
@@ -25,7 +26,9 @@ if [[ $OS == "Darwin" ]]; then
 elif [[ $OS == "Linux" ]]; then
     echo $OS
     echo "Es una máquina Linux!!"
-    read -p "..Black Alert!. Presiona Enter para comenzar..."
+    echo ""
+    read -p "..Black Alert!...Presiona Enter para comenzar..."
+    echo ""
     function linux () {
         source install.sh
     }
