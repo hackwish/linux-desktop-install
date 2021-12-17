@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/hackwish/linux-desktop-install/compare/v1.3.3...v1.3.4) (2021-12-17)
+
+
+### Bug Fixes
+
+* **installer:** remove xquartz on mac_installer ([ac55fc9](https://github.com/hackwish/linux-desktop-install/commit/ac55fc96aaa3ce6e30efb0282d2fdcc2e3c963c0))
+
 ## [1.3.3](https://github.com/hackwish/linux-desktop-install/compare/v1.3.2...v1.3.3) (2021-12-16)
 
 
