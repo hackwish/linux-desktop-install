@@ -1,5 +1,8 @@
-- name: Deploy MAC DevOps Machine with Ansible
-  hosts: desktop
+- name: Run common on MAC
+  import_playbook: mac-common.yml
+
+- name: Deploy MAC Desktop Machine with Ansible
+  hosts: mac
   become: false
 
   vars:
@@ -8,6 +11,5 @@
     #   - "/usr/local/share/zsh/site-functions"
 
   roles:
-    - common-mac
 
   tasks:

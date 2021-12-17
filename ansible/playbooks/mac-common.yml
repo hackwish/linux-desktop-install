@@ -1,0 +1,5 @@
+- name: Deploy common-mac
+  hosts: mac
+
+  roles:
+    - common-mac
