@@ -123,7 +123,6 @@ tap "homebrew/cask-fonts"
 brew "universal-ctags", args: ["HEAD"]
 brew "git"
 brew "ansible"
-cask "xquartz"
 EOF
 
 # fancy_echo "Update heroku binary ..."
