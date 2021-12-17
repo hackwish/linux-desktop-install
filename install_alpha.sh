@@ -1,36 +1,20 @@
 #!/bin/bash
 ##
-# Color  Variables
-##
-green='\e[32m'
-blue='\e[34m'
-clear='\e[0m'
-
-##
-# Color Functions
-##
-
-ColorGreen(){
-	echo -ne $green$1$clear
-}
-ColorBlue(){
-	echo -ne $blue$1$clear
-}
 
 echo ""
 echo "Bienvenid@ a ByDefault Asimilation"
 echo ""
-echo -ne $(ColorBlue "
+echo "
 ==============================
 | ...Resistance is Futile... |
-==============================")
+=============================="
 echo ""
 echo "Antes de empezar, detectemos tu OS..."
 echo ""
 
 OS=`uname`
 
-if [[ $OS == "darwin" ]]; then
+if [[ $OS == "Darwin" ]]; then
     echo $OS
     echo "Es una máquina macOS!!"
     read -p "..Black Alert!. Presiona Enter para comenzar..."

@@ -46,7 +46,7 @@ fi
 # shellcheck disable=SC2016
 append_to_zshrc 'export PATH="$HOME/.bin:$PATH"'
 
-HOMEBREW_PREFIX="/usr/local"
+HOMEBREW_PREFIX="$HOME/homebrew"
 
 # if [ -d "$HOMEBREW_PREFIX" ]; then
 #   if ! [ -r "$HOMEBREW_PREFIX" ]; then
@@ -81,35 +81,29 @@ HOMEBREW_PREFIX="/usr/local"
 #     ;;
 # esac
 
-# gem_install_or_update() {
-#   if gem list "$1" --installed > /dev/null; then
-#     gem update "$@"
-#   else
-#     gem install "$@"
-#   fi
-# }
+gem_install_or_update() {
+  if gem list "$1" --installed > /dev/null; then
+    gem update "$@"
+  else
+    gem install "$@"
+  fi
+}
 
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
-git clone https://github.com/Homebrew/brew homebrew
-eval "$(homebrew/bin/brew shellenv)"
+  rm -rf $HOME/homebrew
+  git clone https://github.com/Homebrew/brew $HOME/homebrew
+  eval "$($HOME/homebrew/bin/brew shellenv)"
+  append_to_zshrc '# recommended by brew doctor'
 
-    # curl -fsS \
-    #   'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
+  # shellcheck disable=SC2016
+  append_to_zshrc 'export PATH="/usr/local/bin:$PATH"' 1
+  append_to_zshrc 'export PATH="/usr/local/sbin:$PATH"' 1
+  append_to_zshrc 'export PATH="$HOME/homebrew/bin:$PATH"' 1
 
-    append_to_zshrc '# recommended by brew doctor'
-
-    # shellcheck disable=SC2016
-    append_to_zshrc 'export PATH="/usr/local/bin:$PATH"' 1
-    append_to_zshrc 'export PATH="/usr/local/sbin:$PATH"' 1
-
-    export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="$HOME/homebrew/bin:$PATH"
 fi
-
-# if brew list --formula | grep -Fq brew-cask; then
-#   fancy_echo "Uninstalling old Homebrew-Cask ..."
-#   brew uninstall --force brew-cask
-# fi
 
 fancy_echo "Updating Homebrew formulae ..."
 brew update --force --quiet
@@ -120,6 +114,10 @@ tap "homebrew/services"
 tap "universal-ctags/universal-ctags"
 tap "heroku/brew"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "adoptopenjdk/openjdk"
 brew "universal-ctags", args: ["HEAD"]
 brew "git"
 brew "ansible"
@@ -169,9 +167,9 @@ gem update --system
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
-# fancy_echo "Installing latest Node ..."
-# bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
-# install_asdf_language "nodejs"
+fancy_echo "Installing latest Node ..."
+bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
+install_asdf_language "nodejs"
 
 if ! [ -d ~/.oh-my-zsh ]
 then
@@ -227,29 +225,18 @@ fi
 #   . "$HOME/.laptop.local"
 # fi
 
-# #Install Homebrew
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-#Install ansible
-# if [ ansible --version | grep 'ansible' ]; 
-# then
-#   brew upgrade ansible
-# else
-#   brew install ansible
-# fi
-
 #Ansible
-# echo "Iniciando Ansible Deploy"
-# ANSIBLE_CUSTOM_DIR=`pwd`
+echo "Iniciando Ansible Deploy"
+ANSIBLE_CUSTOM_DIR=`pwd`
 
-# ## echo "Descargando requirements"
-# ## ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
+echo "instalando colecciones"
+ansible-galaxy collection install ansible.posix
+ansible-galaxy collection install community.docker
+ansible-galaxy collection install community.sops
+ansible-galaxy collection install community.general
 
-# echo "Activando Colecciones"
-# ansible-galaxy collection install community.general
-
-# echo "Descargando roles"
-# ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
+echo "Descargando roles"
+ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
 # echo "Comienza Deployment con Ansible"
 # ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/mac.yml
