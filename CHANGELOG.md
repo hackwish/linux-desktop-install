@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/hackwish/linux-desktop-install/compare/v1.4.4...v1.4.5) (2021-12-17)
+
+
+### Performance Improvements
+
+* **ansible:** Enable MAC roles ([1af960c](https://github.com/hackwish/linux-desktop-install/commit/1af960cb43a20ce3029635efa5bb22b2ee7a5856))
+
 ## [1.4.4](https://github.com/hackwish/linux-desktop-install/compare/v1.4.3...v1.4.4) (2021-12-17)
 
 
