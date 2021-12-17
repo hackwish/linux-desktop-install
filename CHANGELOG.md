@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/hackwish/linux-desktop-install/compare/v1.4.2...v1.4.3) (2021-12-17)
+
+
+### Bug Fixes
+
+* **installer:** update mac_install script ([c5af76c](https://github.com/hackwish/linux-desktop-install/commit/c5af76c4fa0d61289c48c8085453f80f95959ccd))
+
 ## [1.4.2](https://github.com/hackwish/linux-desktop-install/compare/v1.4.1...v1.4.2) (2021-12-17)
 
 
