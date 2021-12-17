@@ -167,9 +167,9 @@ gem update --system
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
-fancy_echo "Installing latest Node ..."
-bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
-install_asdf_language "nodejs"
+# fancy_echo "Installing latest Node ..."
+# bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
+# install_asdf_language "nodejs"
 
 if ! [ -d ~/.oh-my-zsh ]
 then
