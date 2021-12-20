@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/hackwish/linux-desktop-install/compare/v1.4.7...v1.5.0) (2021-12-20)
+
+
+### Features
+
+* **ansible:** Add Desktop and DevOps roles ([a45bf4e](https://github.com/hackwish/linux-desktop-install/commit/a45bf4eff348d31b382f3f8062bce0aa4b016aeb))
+
 ## [1.4.7](https://github.com/hackwish/linux-desktop-install/compare/v1.4.6...v1.4.7) (2021-12-17)
 
 
