@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/hackwish/linux-desktop-install/compare/v1.5.0...v1.5.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* **ansible:** clean bre initial script ([d28cce0](https://github.com/hackwish/linux-desktop-install/commit/d28cce0890200d22199b697e937f8f98111e6d76))
+
 # [1.5.0](https://github.com/hackwish/linux-desktop-install/compare/v1.4.7...v1.5.0) (2021-12-20)
 
 
