@@ -111,14 +111,10 @@ chmod -R go-w "$(brew --prefix)/share/zsh"
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
-tap "universal-ctags/universal-ctags"
-tap "heroku/brew"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "adoptopenjdk/openjdk"
-brew "universal-ctags", args: ["HEAD"]
 brew "git"
 brew "ansible"
 EOF
