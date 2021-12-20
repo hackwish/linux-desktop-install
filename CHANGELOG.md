@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/hackwish/linux-desktop-install/compare/v1.4.6...v1.4.7) (2021-12-17)
+
+
+### Bug Fixes
+
+* **ansible:** update configs ([e36f54b](https://github.com/hackwish/linux-desktop-install/commit/e36f54b3148b66f57d43f30d86f51e64c015eea6))
+
 ## [1.4.6](https://github.com/hackwish/linux-desktop-install/compare/v1.4.5...v1.4.6) (2021-12-17)
 
 
