@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/hackwish/linux-desktop-install/compare/v1.5.1...v1.5.2) (2021-12-21)
+
+
+### Bug Fixes
+
+* **ansible:** perform Ansible reqs for mac_installer ([7c09566](https://github.com/hackwish/linux-desktop-install/commit/7c095660c01e568a001a5e06b2fb96ae1e0961e6))
+
 ## [1.5.1](https://github.com/hackwish/linux-desktop-install/compare/v1.5.0...v1.5.1) (2021-12-20)
 
 
