@@ -1,0 +1,9 @@
+---
+- name: common-mac
+  src: https://github.com/hackwish/ansible-common-mac.git
+
+- name: common-mac-desktop
+  src: https://github.com/hackwish/ansible-common-mac-desktop.git
+
+- name: common-mac-devops-desktop
+  src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
