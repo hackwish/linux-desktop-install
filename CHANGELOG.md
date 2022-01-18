@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/hackwish/linux-desktop-install/compare/v1.5.3...v1.5.4) (2022-01-18)
+
+
+### Bug Fixes
+
+* **installer:** update installer for linux ([d30e3fa](https://github.com/hackwish/linux-desktop-install/commit/d30e3faed236ec26e9872f5357c8b7618e5c8e77))
+
 ## [1.5.3](https://github.com/hackwish/linux-desktop-install/compare/v1.5.2...v1.5.3) (2021-12-21)
 
 
