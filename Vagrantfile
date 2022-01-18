@@ -39,10 +39,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     master.vm.provision :hosts do |provisioner|
       provisioner.autoconfigure = true
-      provisioner.add_host '127.0.0.1', ['desktop01.bydefault-cl.test', 'desktop01', 'ansible']
+      provisioner.add_host '127.0.0.1', ['bydefault01.bydefault-cl.test', 'bydefault01', 'ansible']
     end
 
-  master.vm.provision :shell, :inline => "cd /vagrant && bash install.sh"
+  # master.vm.provision :shell, :inline => "cd /vagrant && bash install.sh"
   #master.vm.provision :shell, :inline => "install.sh"
 	#master.vm.provision "shell", path: "install.sh"
   end
