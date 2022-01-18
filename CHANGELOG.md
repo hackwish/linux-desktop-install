@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/hackwish/linux-desktop-install/compare/v1.5.2...v1.5.3) (2021-12-21)
+
+
+### Bug Fixes
+
+* **installer:** fix reqs mac name ([89d563b](https://github.com/hackwish/linux-desktop-install/commit/89d563bf6ee1277d3efd33453b1a7d302e799a10))
+
 ## [1.5.2](https://github.com/hackwish/linux-desktop-install/compare/v1.5.1...v1.5.2) (2021-12-21)
 
 
