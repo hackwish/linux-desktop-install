@@ -42,7 +42,7 @@ echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade
 
 echo "Instalando dependencias previas"
-apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python3 python3-pip python-is-python3
+apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python3 python3-pip python-is-python3 libwxgtk3.0-gtk3-0v5
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
@@ -58,9 +58,9 @@ else
 	# Temporal Modprobe fix
 	modprobe ip_conntrack
 	# Fix WoeUSB
-	wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
-	dpkg -i libwxgtk*_amd64.deb
-	rm -rf libwxgtk*
+	# wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
+	# dpkg -i libwxgtk*_amd64.deb
+	# rm -rf libwxgtk*
 fi
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
