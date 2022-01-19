@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/hackwish/linux-desktop-install/compare/v1.5.5...v1.5.6) (2022-01-19)
+
+
+### Bug Fixes
+
+* **installer:** re-add python deps ([671797d](https://github.com/hackwish/linux-desktop-install/commit/671797dcd4b686b7d0bd842f736fb1fc298216ad))
+
 ## [1.5.5](https://github.com/hackwish/linux-desktop-install/compare/v1.5.4...v1.5.5) (2022-01-19)
 
 
