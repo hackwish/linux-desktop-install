@@ -34,7 +34,7 @@ elif [ ${DISTRIB_CODENAME} == 'hera' ] || [ ${DISTRIB_CODENAME} == 'juno' ]; the
 	echo "Manual adding Ansible PPA"
 	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" >> /etc/apt/sources.list.d/ansible-ubuntu-ansible-bionic.list
 else
-	echo "NOT Adding Ansible PPA"	
+	echo "NOT Adding Ansible PPA"
 	echo $DISTRIB_CODENAME
 fi
 
@@ -42,7 +42,7 @@ echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade
 
 echo "Instalando dependencias previas"
-apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python-apt python3-minimal python3-pip
+apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
@@ -58,9 +58,9 @@ else
 	# Temporal Modprobe fix
 	modprobe ip_conntrack
 	# Fix WoeUSB
-	# wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
-	# dpkg -i libwxgtk*_amd64.deb
-	# rm -rf libwxgtk*
+	wget http://mirrors.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb
+	dpkg -i libwxgtk*_amd64.deb
+	rm -rf libwxgtk*
 fi
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
@@ -70,7 +70,7 @@ echo "Ahora vamos a adecuar la instalación..."
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
 # Linux Mint distros
-if [ ${DISTRIB_CODENAME} == 'ulyana' ] || [ ${DISTRIB_CODENAME} == 'ulyssa' ] || [ ${DISTRIB_CODENAME} == 'uma' ]; then
+if [ ${DISTRIB_CODENAME} == 'ulyana' ] || [ ${DISTRIB_CODENAME} == 'ulyssa' ] || [ ${DISTRIB_CODENAME} == 'uma' ] || [ ${DISTRIB_CODENAME} == 'una' ]; then
 	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='focal'
 elif  [ ${DISTRIB_CODENAME} == 'tricia' ] || [ ${DISTRIB_CODENAME} == 'tina' ] || [ ${DISTRIB_CODENAME} == 'tessa' ] || [ ${DISTRIB_CODENAME} == 'tara' ]; then
