@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/hackwish/linux-desktop-install/compare/v1.5.8...v1.5.9) (2022-01-19)
+
+
+### Bug Fixes
+
+* **installer:** disable force pip3 ([891d5e3](https://github.com/hackwish/linux-desktop-install/commit/891d5e3b33e799406dd5814611ca34e11bda1323))
+
 ## [1.5.8](https://github.com/hackwish/linux-desktop-install/compare/v1.5.7...v1.5.8) (2022-01-19)
 
 
