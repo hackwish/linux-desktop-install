@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/hackwish/linux-desktop-install/compare/v1.5.4...v1.5.5) (2022-01-19)
+
+
+### Bug Fixes
+
+* **installer:** add mint una distro ([3d12289](https://github.com/hackwish/linux-desktop-install/commit/3d12289fe17c5ec03defdc4c52bd12ebe0ef8d48))
+
 ## [1.5.4](https://github.com/hackwish/linux-desktop-install/compare/v1.5.3...v1.5.4) (2022-01-18)
 
 
