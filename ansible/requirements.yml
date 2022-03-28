@@ -114,6 +114,9 @@
 - name: velero-io
   src: https://github.com/hackwish/ansible-velero-io.git
 
+- name: stern
+  src: https://github.com/hackwish/ansible-stern.git
+
 # - name: anbox
 #   src: https://github.com/hackwish/ansible-anbox.git
 

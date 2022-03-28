@@ -53,6 +53,7 @@
     - velero-io
     - fesaille.gh
     - terraform-docs
+    - stern
     # - anbox
 
   tasks:
