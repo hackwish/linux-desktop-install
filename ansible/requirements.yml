@@ -69,6 +69,9 @@
 - name: terraform-docs
   src: https://github.com/hackwish/ansible-terraform-docs.git
 
+- name: aws-vpn-client
+  src: https://github.com/hackwish/ansible-aws-vpn-client.git
+
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 
@@ -116,6 +119,9 @@
 
 - name: stern
   src: https://github.com/hackwish/ansible-stern.git
+
+- name: edge-browser
+  src: https://github.com/hackwish/ansible-edge-browser.git
 
 # - name: anbox
 #   src: https://github.com/hackwish/ansible-anbox.git
