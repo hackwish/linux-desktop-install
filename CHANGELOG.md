@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/hackwish/linux-desktop-install/compare/v1.5.9...v1.6.0) (2022-03-28)
+
+
+### Features
+
+* **ansible:** Add Stern role on DevOps-Linux-Desktop ([031bed6](https://github.com/hackwish/linux-desktop-install/commit/031bed66dde10f68093a93c3b20598151a39d4f8))
+
 ## [1.5.9](https://github.com/hackwish/linux-desktop-install/compare/v1.5.8...v1.5.9) (2022-01-19)
 
 
