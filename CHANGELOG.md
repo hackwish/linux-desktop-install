@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/hackwish/linux-desktop-install/compare/v1.6.0...v1.7.0) (2022-04-14)
+
+
+### Features
+
+* **ansible:** add devops packages. Add Edge Browser role. Add awsvpnclient role ([d4a55a0](https://github.com/hackwish/linux-desktop-install/commit/d4a55a0382ede425da11be9dcb5c172e15dc4fb4))
+
 # [1.6.0](https://github.com/hackwish/linux-desktop-install/compare/v1.5.9...v1.6.0) (2022-03-28)
 
 
