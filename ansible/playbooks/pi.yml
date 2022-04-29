@@ -8,6 +8,5 @@
 
   vars:
 
-  # roles:
-  #   - ohmyzsh
-  #   - cloudalchemy.node-exporter
+  roles:
+    - docker

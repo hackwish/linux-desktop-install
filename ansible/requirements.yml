@@ -75,8 +75,8 @@
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
 
-# - name: docker
-#   src: https://github.com/hackwish/ansible-docker.git
+- name: docker
+  src: https://github.com/hackwish/ansible-docker.git
 
 # - name: rke
 #   src: https://github.com/hackwish/ansible-rke.git
