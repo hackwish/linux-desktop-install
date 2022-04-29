@@ -54,6 +54,7 @@ if [ ${ARCHITECTURE} == 'aarch64' ]; then
 	systemctl disable console-setup
 	apt-get install -y busybox-syslogd
 	dpkg --purge rsyslog
+	modprobe ip_conntrack
 else  
 	# Temporal Modprobe fix
 	modprobe ip_conntrack
