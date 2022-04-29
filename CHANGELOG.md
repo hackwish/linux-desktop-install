@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/hackwish/linux-desktop-install/compare/v1.7.0...v1.7.1) (2022-04-29)
+
+
+### Bug Fixes
+
+* **bash:** add modporbe on aarch64 ([3ff88f4](https://github.com/hackwish/linux-desktop-install/commit/3ff88f49cb26636545ee6e4098912088a9e7bd73))
+
 # [1.7.0](https://github.com/hackwish/linux-desktop-install/compare/v1.6.0...v1.7.0) (2022-04-14)
 
 
