@@ -10,22 +10,22 @@
   become: yes
 
   tasks:
-    - name: Ensure python Ansible Requirements modules.
-      pip:
-        name:
-          - PyYAML
-          - ansible-lint
-          - cryptography
-          - gevent
-          - grpcio
-          - grpcio-tools
-          - lxml
-          - passlib
-          - python-apt
-          - requests
-        # executable: pip3
-        state: present
-      when: ansible_architecture == "x86_64"
+    # - name: Ensure python Ansible Requirements modules.
+    #   pip:
+    #     name:
+    #       - PyYAML
+    #       - ansible-lint
+    #       - cryptography
+    #       - gevent
+    #       - grpcio
+    #       - grpcio-tools
+    #       - lxml
+    #       - passlib
+    #       - python-apt
+    #       - requests
+    #     executable: pip3
+    #     state: present
+    #   when: ansible_architecture == "x86_64"
 
     - name: Create a 4096-bit SSH key for user root
       user:
