@@ -42,7 +42,7 @@ echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade
 
 echo "Instalando dependencias previas"
-apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python3 python3-pip python-is-python3 libwxgtk3.0-gtk3-0v5
+apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python3 python3-pip python3-openssl python-is-python3 libwxgtk3.0-gtk3-0v5
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
