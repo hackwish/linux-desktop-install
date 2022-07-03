@@ -27,3 +27,4 @@ ansible/vault_password
 velero
 .DS_Store
 CHANGELOG.md
+*sync-conflict*

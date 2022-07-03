@@ -12,6 +12,9 @@
 - name: common-devops-desktop
   src: https://github.com/hackwish/ansible-common-devops-desktop.git
 
+- name: common-tv
+  src: https://github.com/hackwish/ansible-common-tv.git
+
 - name: common-mac
   src: https://github.com/hackwish/ansible-common-mac.git
 

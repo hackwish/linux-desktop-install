@@ -3,11 +3,18 @@
   import_playbook: common.yml
 
 - name: Deploy TV Linux Desktop with Ansible
-  hosts: desktop
+  hosts: tv
   become: yes
 
   vars:
 
   roles:
+    - common-tv
     - plank
+    - droidcam
+    - anydesk
     - docker
+
+  tasks:
+    - name: Fix Docker execution without sudo #Issue #7
+      shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"

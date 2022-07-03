@@ -3,14 +3,19 @@
   import_playbook: common.yml
 
 - name: Deploy pi device with Ansible
-  hosts: pi
+  hosts: server
   become: yes
 
   vars:
 
   roles:
+    - common-server
     - docker
 
   tasks:
+    - name: Config git user
+      shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main
+      with_items: "{{ users.stdout_lines }}"
+
     - name: Fix Docker execution without sudo #Issue #7
       shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"
