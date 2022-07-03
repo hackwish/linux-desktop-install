@@ -24,3 +24,17 @@ ansible_connection=local
 [pi:vars]
 ansible_connection=local
 ansible_user=root
+
+[tv]
+127.0.0.1
+
+[tv:vars]
+ansible_connection=local
+ansible_user=root
+
+[server]
+127.0.0.1
+
+[server:vars]
+ansible_connection=local
+ansible_user=root
