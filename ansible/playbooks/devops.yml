@@ -52,7 +52,7 @@
     - istioctlenv
     - cf-terraforming
     - velero-io
-    - fesaille.gh
+    # - fesaille.gh
     - terraform-docs
     - stern
     - aws-vpn-client
