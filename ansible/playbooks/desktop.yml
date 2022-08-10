@@ -4,19 +4,19 @@
 
 - name: Deploy Common Linux Desktop with Ansible
   hosts: desktop
-  become: yes
+  become: true
 
-  vars:
+  # vars:
 
   roles:
     - common-desktop
-    - plank
+    # - plank
     - droidcam
-    - anydesk
+    # - anydesk
     #- edge-browser
     # - anbox
     - docker
 
   tasks:
     - name: Fix Docker execution without sudo #Issue #7
-      shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"
+      shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; dontrue

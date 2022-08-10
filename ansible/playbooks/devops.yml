@@ -4,9 +4,9 @@
 
 - name: Deploy Linux DevOps War machine with Ansible
   hosts: devops
-  become: yes
+  become: true
 
-  vars:
+  # vars:
     # nvm_install_script_version: "0.33.11"
     # nvm_node_version: "4.1.1"
     # nvm_install_globally: ['peerflix']
@@ -15,9 +15,9 @@
   roles:
     - common-desktop
     - common-devops-desktop
-    - plank
+      #- plank
     - droidcam
-    - anydesk
+      # - anydesk
     #- edge-browser
     - andrewrothstein.vagrant
     - azure-data-studio
@@ -35,7 +35,7 @@
     ##- capistrano
     ##- rgibert.valve_steam
     # - geerlingguy.packer
-    # ##- docker
+    - docker
     # - gantsign.minikube
     # - andrewrothstein.kubectl
     # - rke

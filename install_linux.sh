@@ -42,7 +42,7 @@ echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade
 
 echo "Instalando dependencias previas"
-apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https python3 python3-pip python3-openssl python-is-python3 libwxgtk3.0-gtk3-0v5
+apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https ca-certificates gnupg2 ubuntu-keyring python3 python3-pip python3-openssl python3-jinja2 python-is-python3 libwxgtk3.0-gtk3-0v5
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
@@ -71,7 +71,10 @@ echo "Ahora vamos a adecuar la instalación..."
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
 # Linux Mint distros
-if [ ${DISTRIB_CODENAME} == 'ulyana' ] || [ ${DISTRIB_CODENAME} == 'ulyssa' ] || [ ${DISTRIB_CODENAME} == 'uma' ] || [ ${DISTRIB_CODENAME} == 'una' ]; then
+if [ ${DISTRIB_CODENAME} == 'vanessa' ]; then
+        echo $DISTRIB_CODENAME
+        export DISTRIB_CODENAME='jammy'
+elif [ ${DISTRIB_CODENAME} == 'ulyana' ] || [ ${DISTRIB_CODENAME} == 'ulyssa' ] || [ ${DISTRIB_CODENAME} == 'uma' ] || [ ${DISTRIB_CODENAME} == 'una' ]; then
 	echo $DISTRIB_CODENAME
 	export DISTRIB_CODENAME='focal'
 elif  [ ${DISTRIB_CODENAME} == 'tricia' ] || [ ${DISTRIB_CODENAME} == 'tina' ] || [ ${DISTRIB_CODENAME} == 'tessa' ] || [ ${DISTRIB_CODENAME} == 'tara' ]; then

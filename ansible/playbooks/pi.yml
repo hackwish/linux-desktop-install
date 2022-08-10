@@ -4,9 +4,9 @@
 
 - name: Deploy pi device with Ansible
   hosts: pi
-  become: yes
+  become: true
 
-  vars:
+  # vars:
 
   roles:
     - docker

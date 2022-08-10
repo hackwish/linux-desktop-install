@@ -31,7 +31,7 @@
   src: https://github.com/hackwish/ansible-brew.git
 
 - name: cloudalchemy.node-exporter
-  src: git+https://github.com/cloudalchemy/ansible-node-exporter.git
+  src: cloudalchemy.node_exporter
 
 - name: netdata
   src: https://github.com/hackwish/ansible-netdata.git

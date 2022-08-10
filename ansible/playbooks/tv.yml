@@ -4,15 +4,15 @@
 
 - name: Deploy TV Linux Desktop with Ansible
   hosts: tv
-  become: yes
+  become: true
 
-  vars:
+  # vars:
 
   roles:
-    - common-tv
-    - plank
+    - common-desktop
+    # - plank
     - droidcam
-    - anydesk
+    # - anydesk
     - docker
 
   tasks:
