@@ -15,49 +15,48 @@
   roles:
     - common-desktop
     - common-devops-desktop
-      #- plank
-    - droidcam
       # - anydesk
-    #- edge-browser
-    - andrewrothstein.vagrant
-    - azure-data-studio
-    - cloud-sql-proxy
-    - tfswitch
-    - terragrunt
-    - andrewrothstein.sops
-    - brew
-    #####################
+      #- plank
+    # #- wtanaka.gcloud_sdk
+    # - anbox
+    # - andrewrothstein.kubectl
+    # - andrewrothstein.kubernetes-helm
+    # - andrewrothstein.vagrant
+    # - fesaille.gh
+    # - gantsign.minikube
+    # - geerlingguy.packer
     # - grzegorznowak.nvm_node
-    #- andrewrothstein.terraform
-    #- suzuki-shunsuke.git-lfs-ubuntu
-    #- gnagano.ansible_gitflow
+    # - ibmcloud
+    # - kompose-converter
     # - ngetchell.vscode
+    # - rancher2-cli
+    # - rke
     ##- capistrano
     ##- rgibert.valve_steam
-    # - geerlingguy.packer
-    - docker
-    # - gantsign.minikube
-    # - andrewrothstein.kubectl
-    # - rke
-    # - andrewrothstein.kubernetes-helm
-    # - rancher2-cli
-    # - kompose-converter
-    # #- wtanaka.gcloud_sdk
-    # - ibmcloud
-    - azurecli
-    - kops
-    - k3d
-    - tfenv
-    - terraformer
-    - istioctlenv
-    - cf-terraforming
-    - velero-io
-    # - fesaille.gh
-    - terraform-docs
-    - stern
+    #- andrewrothstein.terraform
+    #- edge-browser
+    #- gnagano.ansible_gitflow
+    #- suzuki-shunsuke.git-lfs-ubuntu
+    - andrewrothstein.sops
     - aws-vpn-client
+    - azure-data-studio
+    - azurecli
+    - brew
+    - cf-terraforming
+    - cloud-sql-proxy
+    - docker
+    - droidcam
+    - istioctlenv
+    - k3d
+    - kops
     - powershell
-    # - anbox
+    - stern
+    - terraform-docs
+    - terraformer
+    - terragrunt
+    - tfenv
+    - tfswitch
+    - velero-io
 
   tasks:
     - name: Config git user

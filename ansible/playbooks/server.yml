@@ -2,11 +2,9 @@
 - name: Run common
   import_playbook: common.yml
 
-- name: Deploy pi device with Ansible
+- name: Deploy a server with Ansible
   hosts: server
-  become: yes
-
-  vars:
+  become: true
 
   roles:
     - common-server

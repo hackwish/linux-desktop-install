@@ -9,13 +9,13 @@
   # vars:
 
   roles:
-    - common-desktop
-    # - plank
-    - droidcam
-    # - anydesk
-    #- edge-browser
     # - anbox
+    # - anydesk
+    # - plank
+    #- edge-browser
+    - common-desktop
     - docker
+    - droidcam
 
   tasks:
     - name: Fix Docker execution without sudo #Issue #7

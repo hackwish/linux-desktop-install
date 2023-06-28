@@ -114,7 +114,7 @@ ansible-galaxy collection install community.general
 echo "Comienza Deployment con Ansible"
 echo "Opciones de Instalación: "
 
-OPCIONES="base desktop devops tv hassio syncthing vpn salir"
+OPCIONES="base desktop devops tv server salir"
 
 PS3="Selecciona una opción: " 
 
@@ -141,19 +141,9 @@ do
 		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/tv.yml
         break
 		;;
-	hassio)
+	server)
 		echo "Se inicia la instalación de $installer"
-		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/pi.yml
-        break
-		;;
-	syncthing)
-		echo "Se inicia la instalación de $installer"
-		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/pi.yml
-        break
-		;;
-	vpn)
-		echo "Se inicia la instalación de $installer"
-		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/pi.yml
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/server.yml
         break
 		;;
     salir) 
