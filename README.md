@@ -1,5 +1,5 @@
-# desktop-install
-This project was born to get a fast install, configuration and update on several systems and applications. First covering my personal devices, and your OS'es (Linux mostly :D), I will expand this and other systems likes *Pi Devices, Apple MAC, and soon (and very experimental yet) Windows.
+# Host-Installer
+This project was born to get a fast installation, configuration and update for several systems and applications. First covering my personal devices, and your OS'es (Linux mostly :D), but I will expand this and other systems likes *Pi Devices, Apple MAC, and soon (and very experimental yet) Windows.
 
 The background it's a mix between scripting and Ansible powered tool to perform and code this configurations.
 
@@ -8,13 +8,14 @@ Now it cover this scenarios:
 - desktop (Linux PC useful installation)
 - devops (Linux PC hardest IT custom installation)
 - tv (Linux htpc based installation)
-- pi (Linux server minimal installation)
-- mac-lite (without admin permissions)
+- server (Linux server minimal installation)
+- mac-lite-desktop (without admin permissions)
+- mac-lite-devops (without admin permissions)
 
 Incoming:
-- server (Linux)
 - windows-desktop
-This repo, use Ansible as configuration mgmt for Linux desktop intallation.
+
+Also this repo, can it used to update/upgrade the mencioned systems using Ansible as configuration mgmt for Linux/MAC intallations.
 
 ## Systems tested:
 - Linux
@@ -28,6 +29,4 @@ This repo, use Ansible as configuration mgmt for Linux desktop intallation.
     - Big Sur
 
 ## ToDo
-- RHEL basedm
-- Arch based
-- Pure Debian
+...
