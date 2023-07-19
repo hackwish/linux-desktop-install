@@ -71,7 +71,7 @@ echo "Ahora vamos a adecuar la instalación..."
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
 # Linux Mint distros
-if [ ${DISTRIB_CODENAME} == 'vanessa' ] || [ ${DISTRIB_CODENAME} == 'vera' ]; then
+if [ ${DISTRIB_CODENAME} == 'vanessa' ] || [ ${DISTRIB_CODENAME} == 'vera' ] || [ ${DISTRIB_CODENAME} == 'victoria' ]; then
         echo $DISTRIB_CODENAME
         export DISTRIB_CODENAME='jammy'
 elif [ ${DISTRIB_CODENAME} == 'ulyana' ] || [ ${DISTRIB_CODENAME} == 'ulyssa' ] || [ ${DISTRIB_CODENAME} == 'uma' ] || [ ${DISTRIB_CODENAME} == 'una' ]; then
@@ -92,8 +92,14 @@ else
 	export DISTRIB_CODENAME=`lsb_release -c -s`
 fi
 
-# Workaround Linux Mint 20 no Snaps Support
+# Workarounds Linux Mint
+## Snaps
 rm -f /etc/apt/preferences.d/nosnap.pref
+apt update
+apt install snapd
+
+## Mouse Pointer theme in root, Qt and Flatpak applications
+update-alternatives --config x-cursor-theme
 
 echo "CodeName AHORA: $DISTRIB_CODENAME"
 
