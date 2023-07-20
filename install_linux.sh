@@ -101,7 +101,7 @@ apt update
 apt install snapd
 
 ## Mouse Pointer theme in root, Qt and Flatpak applications
-update-alternatives --auto --config x-cursor-theme
+update-alternatives --auto x-cursor-theme
 
 #Ansible
 echo "Iniciando Ansible Deploy"
