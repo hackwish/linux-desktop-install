@@ -92,6 +92,8 @@ else
 	export DISTRIB_CODENAME=`lsb_release -c -s`
 fi
 
+echo "CodeName AHORA: $DISTRIB_CODENAME"
+
 # Workarounds Linux Mint
 ## Snaps
 rm -f /etc/apt/preferences.d/nosnap.pref
@@ -100,8 +102,6 @@ apt install snapd
 
 ## Mouse Pointer theme in root, Qt and Flatpak applications
 update-alternatives --config x-cursor-theme
-
-echo "CodeName AHORA: $DISTRIB_CODENAME"
 
 #Ansible
 echo "Iniciando Ansible Deploy"
