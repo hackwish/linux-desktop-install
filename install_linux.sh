@@ -101,7 +101,7 @@ apt update
 apt install snapd
 
 ## Mouse Pointer theme in root, Qt and Flatpak applications
-update-alternatives --config x-cursor-theme
+update-alternatives --auto --config x-cursor-theme
 
 #Ansible
 echo "Iniciando Ansible Deploy"
@@ -111,10 +111,10 @@ echo "Descargando requirements"
 ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
 echo "instalando colecciones"
-ansible-galaxy collection install ansible.posix
-ansible-galaxy collection install community.docker
-ansible-galaxy collection install community.sops
-ansible-galaxy collection install community.general
+ansible-galaxy collection install --force ansible.posix
+ansible-galaxy collection install --force community.docker
+ansible-galaxy collection install --force community.sops
+ansible-galaxy collection install --force community.general
 
 
 echo "Comienza Deployment con Ansible"
