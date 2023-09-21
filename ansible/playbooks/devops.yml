@@ -1,4 +1,3 @@
----
 - name: Run common
   import_playbook: common.yml
 
@@ -7,61 +6,61 @@
   become: true
 
   # vars:
-    # nvm_install_script_version: "0.33.11"
-    # nvm_node_version: "4.1.1"
-    # nvm_install_globally: ['peerflix']
-    # terraform_ver: "0.12.20"
+  # nvm_install_script_version: "0.33.11"
+  # nvm_node_version: "4.1.1"
+  # nvm_install_globally: ['peerflix']
+  # terraform_ver: "0.12.20"
 
   roles:
-    - common-desktop
-    - common-devops-desktop
-      # - anydesk
-      #- plank
-    # #- wtanaka.gcloud_sdk
-    # - anbox
-    # - andrewrothstein.kubectl
-    # - andrewrothstein.kubernetes-helm
-    # - andrewrothstein.vagrant
-    # - fesaille.gh
-    # - gantsign.minikube
-    # - geerlingguy.packer
-    # - grzegorznowak.nvm_node
-    # - ibmcloud
-    # - kompose-converter
-    # - ngetchell.vscode
-    # - rancher2-cli
-    # - rke
-    ##- capistrano
-    ##- rgibert.valve_steam
-    #- andrewrothstein.terraform
-    #- edge-browser
-    #- gnagano.ansible_gitflow
-    #- suzuki-shunsuke.git-lfs-ubuntu
-    - andrewrothstein.sops
-    - aws-vpn-client
-    - azure-data-studio
-    - azurecli
-    - brew
-    - cf-terraforming
-    - cloud-sql-proxy
-    - docker
-    - droidcam
-    - istioctlenv
-    - k3d
-    - kops
-    - powershell
-    - stern
-    - terraform-docs
-    - terraformer
-    - terragrunt
-    - tfenv
-    - tfswitch
-    - velero-io
+  - common-desktop
+  - common-devops-desktop
+  # - anydesk
+  #- plank
+  # #- wtanaka.gcloud_sdk
+  # - anbox
+  # - andrewrothstein.kubectl
+  # - andrewrothstein.kubernetes-helm
+  # - andrewrothstein.vagrant
+  # - fesaille.gh
+  # - gantsign.minikube
+  # - geerlingguy.packer
+  # - grzegorznowak.nvm_node
+  # - ibmcloud
+  # - kompose-converter
+  # - ngetchell.vscode
+  # - rancher2-cli
+  # - rke
+  ##- capistrano
+  ##- rgibert.valve_steam
+  #- andrewrothstein.terraform
+  #- edge-browser
+  #- gnagano.ansible_gitflow
+  #- suzuki-shunsuke.git-lfs-ubuntu
+  # - docker
+  # - droidcam
+  - andrewrothstein.sops
+  - aws-vpn-client
+  - azure-data-studio
+  - azurecli
+  - brew
+  - cf-terraforming
+  - cloud-sql-proxy
+  - istioctlenv
+  - k3d
+  - kops
+  - powershell
+  - stern
+  - terraform-docs
+  - terraformer
+  - terragrunt
+  - tfenv
+  - tfswitch
+  - velero-io
 
   tasks:
-    - name: Config git user
-      shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main
-      with_items: "{{ users.stdout_lines }}"
+  - name: Config git user
+    shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main
+    with_items: "{{ users.stdout_lines }}"
 
-    - name: Fix Docker execution without sudo #Issue #7
-      shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"
+  - name: Fix Docker execution without sudo #Issue #7
+    shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"

@@ -1,19 +1,21 @@
----
+collections:
+- ansible.posix
+- community.docker
+- community.sops
+
+- name: community.general
+  version: 6.0.0
+
+roles:
+# Common roles
 - name: common
   src: https://github.com/hackwish/ansible-common.git
 
 - name: common-desktop
   src: https://github.com/hackwish/ansible-common-desktop.git
-  # version: ubuntu-2004
-
-- name: common-server
-  src: https://github.com/hackwish/ansible-common-server.git
 
 - name: common-devops-desktop
   src: https://github.com/hackwish/ansible-common-devops-desktop.git
-
-- name: common-tv
-  src: https://github.com/hackwish/ansible-common-tv.git
 
 - name: common-mac
   src: https://github.com/hackwish/ansible-common-mac.git
@@ -24,62 +26,116 @@
 - name: common-mac-devops-desktop
   src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
 
-- name: ohmyzsh
-  src: https://github.com/hackwish/ansible-ohmyzsh.git
+- name: common-server
+  src: https://github.com/hackwish/ansible-common-server.git
 
-- name: brew
-  src: https://github.com/hackwish/ansible-brew.git
+- name: common-tv
+  src: https://github.com/hackwish/ansible-common-tv.git
 
-- name: cloudalchemy.node-exporter
-  src: cloudalchemy.node_exporter
-
-- name: netdata
-  src: https://github.com/hackwish/ansible-netdata.git
-
-#- name: bihealth.python3
-#  src: bihealth.python3
-
-- name: andrewrothstein.vagrant
-  src: andrewrothstein.vagrant
+# App Roles
+- name: aws-vpn-client
+  src: https://github.com/hackwish/ansible-aws-vpn-client.git
 
 - name: azure-data-studio
   src: https://github.com/hackwish/ansible-azure-data-studio.git
 
-# - name: grzegorznowak.nvm_node
-#   src: grzegorznowak.nvm_node
+- name: azurecli
+  src: https://github.com/hackwish/ansible-role-azurecli.git
+
+- name: brew
+  src: https://github.com/hackwish/ansible-brew.git
+
+- name: cf-terraforming
+  src: https://github.com/hackwish/ansible-cf-terraforming.git
 
 - name: cloud-sql-proxy
   src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
 
-- name: plank
-  src: https://github.com/hackwish/ansible-plank.git
-
-- name: tfswitch
-  src: https://github.com/hackwish/ansible-tfswitch.git
-
-- name: terragrunt
-  src: https://github.com/hackwish/ansible-terragrunt.git
-
-- name: andrewrothstein.sops
-  src: andrewrothstein.sops
+- name: docker
+  src: https://github.com/hackwish/ansible-docker.git
 
 - name: droidcam
   src: https://github.com/hackwish/ansible-droidcam.git
 
-- name: anydesk
-  src: https://github.com/hackwish/ansible-anydesk.git
+- name: istioctlenv
+  src: https://github.com/hackwish/ansible-istioctlenv.git
+
+- name: k3d
+  src: https://github.com/hackwish/ansible-k3d.git
+
+- name: kops
+  src: https://github.com/hackwish/ansible-kops.git
+
+- name: ohmyzsh
+  src: https://github.com/hackwish/ansible-ohmyzsh.git
+
+- name: powershell
+  src: https://github.com/hackwish/ansible-powershell.git
+
+- name: stern
+  src: https://github.com/hackwish/ansible-stern.git
 
 - name: terraform-docs
   src: https://github.com/hackwish/ansible-terraform-docs.git
 
-- name: aws-vpn-client
-  src: https://github.com/hackwish/ansible-aws-vpn-client.git
+- name: terraformer
+  src: https://github.com/hackwish/ansible-terraformer.git
+
+- name: terragrunt
+  src: https://github.com/hackwish/ansible-terragrunt.git
+
+- name: tfenv
+  src: https://github.com/hackwish/ansible-tfenv.git
+
+- name: tfswitch
+  src: https://github.com/hackwish/ansible-tfswitch.git
+
+- name: velero-io
+  src: https://github.com/hackwish/ansible-velero-io.git
+
+# Community roles
+- name: andrewrothstein.sops
+  src: andrewrothstein.sops
+
+# - name: cloudalchemy.node-exporter
+#   src: cloudalchemy.node_exporter
+
+# - name: netdata
+#   src: https://github.com/hackwish/ansible-netdata.git
+
+#- name: bihealth.python3
+#  src: bihealth.python3
+
+# - name: andrewrothstein.vagrant
+#   src: andrewrothstein.vagrant
+
+# - name: fesaille.gh
+#   src: fesaille.gh
+
+
+# - name: grzegorznowak.nvm_node
+#   src: grzegorznowak.nvm_node
+
+
+
+# - name: plank
+#   src: https://github.com/hackwish/ansible-plank.git
+
+
+
+
+
+
+
+# - name: anydesk
+#   src: https://github.com/hackwish/ansible-anydesk.git
+
+
+
+
 
 # - name: andrewrothstein.terraform
 #   src: andrewrothstein.terraform
-
-- name: docker
-  src: https://github.com/hackwish/ansible-docker.git
 
 # - name: rke
 #   src: https://github.com/hackwish/ansible-rke.git
@@ -93,47 +149,32 @@
 # - name: capistrano
 #   src: https://github.com/hackwish/ansible-capistrano.git
 
-- name: ibmcloud
-  src: https://github.com/hackwish/ansible-ibmcloud.git
-  
-- name: azurecli
-  src: https://github.com/hackwish/ansible-role-azurecli.git
+# - name: ibmcloud
+#   src: https://github.com/hackwish/ansible-ibmcloud.git
 
-- name: kops
-  src: https://github.com/hackwish/ansible-kops.git
 
-- name: k3d
-  src: https://github.com/hackwish/ansible-k3d.git
 
-- name: tfenv
-  src: https://github.com/hackwish/ansible-tfenv.git
 
-- name: terraformer
-  src: https://github.com/hackwish/ansible-terraformer.git
 
-- name: istioctlenv
-  src: https://github.com/hackwish/ansible-istioctlenv.git
 
-- name: cf-terraforming
-  src: https://github.com/hackwish/ansible-cf-terraforming.git
 
-- name: velero-io
-  src: https://github.com/hackwish/ansible-velero-io.git
 
-- name: stern
-  src: https://github.com/hackwish/ansible-stern.git
 
-- name: edge-browser
-  src: https://github.com/hackwish/ansible-edge-browser.git
+
+
+
+
+
+
+
+
+
+# - name: edge-browser
+#   src: https://github.com/hackwish/ansible-edge-browser.git
 
 # - name: anbox
 #   src: https://github.com/hackwish/ansible-anbox.git
 
-- name: powershell
-  src: https://github.com/hackwish/ansible-powershell.git
-
-- name: fesaille.gh
-  src: fesaille.gh
 
 # - name: andrewrothstein.kubernetes-helm
 #   src: andrewrothstein.kubernetes-helm

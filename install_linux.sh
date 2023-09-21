@@ -107,14 +107,11 @@ update-alternatives --auto x-cursor-theme
 echo "Iniciando Ansible Deploy"
 ANSIBLE_CUSTOM_DIR=`pwd`
 
-echo "Descargando requirements"
+echo "Descargando Roles y Colecciones"
 ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
-echo "instalando colecciones"
-ansible-galaxy collection install --force ansible.posix
-ansible-galaxy collection install --force community.docker
-ansible-galaxy collection install --force community.sops
-ansible-galaxy collection install --force community.general
+# echo "instalando colecciones"
+# ansible-galaxy collection install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
 
 echo "Comienza Deployment con Ansible"
