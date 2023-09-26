@@ -14,13 +14,14 @@
   roles:
   - common-desktop
   - common-devops-desktop
-  # - anydesk
-  #- plank
   # #- wtanaka.gcloud_sdk
   # - anbox
   # - andrewrothstein.kubectl
   # - andrewrothstein.kubernetes-helm
   # - andrewrothstein.vagrant
+  # - anydesk
+  # - docker
+  # - droidcam
   # - fesaille.gh
   # - gantsign.minikube
   # - geerlingguy.packer
@@ -35,9 +36,8 @@
   #- andrewrothstein.terraform
   #- edge-browser
   #- gnagano.ansible_gitflow
+  #- plank
   #- suzuki-shunsuke.git-lfs-ubuntu
-  # - docker
-  # - droidcam
   - andrewrothstein.sops
   - aws-vpn-client
   - azure-data-studio
@@ -48,6 +48,7 @@
   - istioctlenv
   - k3d
   - kops
+  - mimirtool
   - powershell
   - stern
   - terraform-docs

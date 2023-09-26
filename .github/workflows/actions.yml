@@ -2,24 +2,36 @@ name: Release
 on:
   push:
     branches:
-      - master
-      - main
+    - main
+    - master
+
+permissions:
+  contents: read # for checkout
+
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18'
-      - name: Install dependencies
-        run: npm install -g semantic-release @semantic-release/github @semantic-release/git @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/exec
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: "lts/*"
+    - name: Install dependencies
+      run: npm install -g semantic-release @semantic-release/github @semantic-release/git @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/exec
+    # - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+    #   run: npm audit signatures
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npx semantic-release

@@ -66,6 +66,9 @@ roles:
 - name: kops
   src: https://github.com/hackwish/ansible-kops.git
 
+- name: mimirtool
+  src: https://github.com/hackwish/ansible-mimirtool.git
+
 - name: ohmyzsh
   src: https://github.com/hackwish/ansible-ohmyzsh.git
 
