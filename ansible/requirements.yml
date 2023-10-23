@@ -63,6 +63,9 @@ roles:
 - name: k3d
   src: https://github.com/hackwish/ansible-k3d.git
 
+- name: k6
+  src: https://github.com/hackwish/ansible-k6.git
+
 - name: kops
   src: https://github.com/hackwish/ansible-kops.git
 

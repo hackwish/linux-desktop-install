@@ -13,5 +13,6 @@
   roles:
     - common-mac-desktop
     - common-mac-devops-desktop
+    - k6
 
   tasks:

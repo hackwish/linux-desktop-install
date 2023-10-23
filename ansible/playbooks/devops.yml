@@ -47,6 +47,7 @@
   - cloud-sql-proxy
   - istioctlenv
   - k3d
+  - k6
   - kops
   - mimirtool
   - powershell
