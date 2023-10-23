@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/hackwish/linux-desktop-install/compare/v1.10.4...v1.11.0) (2023-09-26)
+
+
+### Features
+
+* **install:** Update Actions. Add Mimitool on DevOps install ([9555381](https://github.com/hackwish/linux-desktop-install/commit/95553819ae1a42c039103013eb218dd313b19e09))
+
 ## [1.7.1](https://github.com/hackwish/linux-desktop-install/compare/v1.7.0...v1.7.1) (2022-04-29)
 
 
