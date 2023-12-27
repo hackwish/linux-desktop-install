@@ -16,6 +16,7 @@
     - common-desktop
     - docker
     - droidcam
+    - supersonic
 
   tasks:
     - name: Fix Docker execution without sudo #Issue #7
