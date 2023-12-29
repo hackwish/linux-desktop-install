@@ -1,3 +1,11 @@
+## [1.12.1](https://github.com/hackwish/linux-desktop-install/compare/v1.12.0...v1.12.1) (2023-12-29)
+
+
+### Bug Fixes
+
+* **desktop:** add supersonic role ([1b2b38e](https://github.com/hackwish/linux-desktop-install/commit/1b2b38ed01038dc52fe9137f5a14a42ef8eef43a))
+* **packages:** add docker role on devops install ([23123e3](https://github.com/hackwish/linux-desktop-install/commit/23123e3efa385826b0bf2273801994728a7e1cce))
+
 # [1.12.0](https://github.com/hackwish/linux-desktop-install/compare/v1.11.0...v1.12.0) (2023-10-23)
 
 
