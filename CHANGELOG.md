@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/hackwish/linux-desktop-install/compare/v1.11.0...v1.12.0) (2023-10-23)
+
+
+### Features
+
+* **install:** Add k6 on DevOps install ([ebf351e](https://github.com/hackwish/linux-desktop-install/commit/ebf351e99a30db62db6c3b2def70b1fc46317b71))
+
 # [1.11.0](https://github.com/hackwish/linux-desktop-install/compare/v1.10.4...v1.11.0) (2023-09-26)
 
 
