@@ -1,4 +1,3 @@
----
 - name: Run common
   import_playbook: common.yml
 
@@ -9,15 +8,11 @@
   # vars:
 
   roles:
-    # - anbox
-    # - anydesk
-    # - plank
-    #- edge-browser
-    - common-desktop
-    - docker
-    - droidcam
-    - supersonic
+  - common-desktop
+  - docker
+  - droidcam
+  - supersonic
 
   tasks:
-    - name: Fix Docker execution without sudo #Issue #7
-      shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; dontrue"
+  - name: Fix Docker execution without sudo #Issue #7
+    shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; dontrue"

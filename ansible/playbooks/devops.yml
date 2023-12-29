@@ -12,31 +12,6 @@
   # terraform_ver: "0.12.20"
 
   roles:
-
-  # #- wtanaka.gcloud_sdk
-  # - anbox
-  # - andrewrothstein.kubectl
-  # - andrewrothstein.kubernetes-helm
-  # - andrewrothstein.vagrant
-  # - anydesk
-  # - docker
-  # - droidcam
-  # - fesaille.gh
-  # - gantsign.minikube
-  # - geerlingguy.packer
-  # - grzegorznowak.nvm_node
-  # - ibmcloud
-  # - kompose-converter
-  # - ngetchell.vscode
-  # - rancher2-cli
-  # - rke
-  ##- capistrano
-  ##- rgibert.valve_steam
-  #- andrewrothstein.terraform
-  #- edge-browser
-  #- gnagano.ansible_gitflow
-  #- plank
-  #- suzuki-shunsuke.git-lfs-ubuntu
   - andrewrothstein.sops
   - aws-vpn-client
   - azure-data-studio
@@ -46,6 +21,7 @@
   - cloud-sql-proxy
   - common-desktop
   - common-devops-desktop
+  - docker
   - istioctlenv
   - k3d
   - k6
