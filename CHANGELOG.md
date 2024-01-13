@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/hackwish/linux-desktop-install/compare/v1.12.1...v1.12.2) (2024-01-13)
+
+
+### Bug Fixes
+
+* **ansible:** add feishin ([9022d50](https://github.com/hackwish/linux-desktop-install/commit/9022d50776efd541992247288aab896c4aba986e))
+
 ## [1.12.1](https://github.com/hackwish/linux-desktop-install/compare/v1.12.0...v1.12.1) (2023-12-29)
 
 
