@@ -102,6 +102,9 @@ roles:
 - name: supersonic
   src: https://github.com/hackwish/ansible-supersonic.git
 
+- name: feishin
+  src: https://github.com/hackwish/ansible-feishin.git
+
 # Community roles
 - name: andrewrothstein.sops
   src: andrewrothstein.sops

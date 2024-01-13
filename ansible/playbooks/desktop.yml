@@ -12,6 +12,7 @@
   - docker
   - droidcam
   - supersonic
+  - feishin
 
   tasks:
   - name: Fix Docker execution without sudo #Issue #7
