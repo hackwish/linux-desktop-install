@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/hackwish/linux-desktop-install/compare/v1.12.2...v1.12.3) (2024-02-07)
+
+
+### Bug Fixes
+
+* **install_linux:** add support for linux mint virginia ([5fe36f8](https://github.com/hackwish/linux-desktop-install/commit/5fe36f845773caf2502b7939c129b291bb801680))
+
 ## [1.12.2](https://github.com/hackwish/linux-desktop-install/compare/v1.12.1...v1.12.2) (2024-01-13)
 
 
