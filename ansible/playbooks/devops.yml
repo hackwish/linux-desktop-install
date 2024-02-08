@@ -12,6 +12,8 @@
   # terraform_ver: "0.12.20"
 
   roles:
+  - common-desktop
+  - common-devops-desktop
   - andrewrothstein.sops
   - aws-vpn-client
   - azure-data-studio
@@ -19,8 +21,6 @@
   - brew
   - cf-terraforming
   - cloud-sql-proxy
-  - common-desktop
-  - common-devops-desktop
   - docker
   - istioctlenv
   - k3d
@@ -35,6 +35,9 @@
   - tfenv
   - tfswitch
   - velero-io
+  - droidcam
+  - supersonic
+  - feishin
   tasks:
   - name: Config git user
     shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main
