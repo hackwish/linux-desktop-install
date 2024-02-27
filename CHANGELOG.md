@@ -1,3 +1,10 @@
+## [1.12.4](https://github.com/hackwish/linux-desktop-install/compare/v1.12.3...v1.12.4) (2024-02-08)
+
+
+### Bug Fixes
+
+* **devops-desktop:** add desktops tools ([5b14b6a](https://github.com/hackwish/linux-desktop-install/commit/5b14b6a6d5ac87921f08ef0294e036dc088941f6))
+
 ## [1.12.3](https://github.com/hackwish/linux-desktop-install/compare/v1.12.2...v1.12.3) (2024-02-07)
 
 
