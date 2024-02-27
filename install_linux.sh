@@ -42,7 +42,7 @@ echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade
 
 echo "Instalando dependencias previas"
-apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https ca-certificates gnupg2 openssh-server ubuntu-keyring python3 python3-pip python3-openssl python3-jinja2 python-is-python3 libwxgtk3.0-gtk3-0v5 libgcc-s1:i386
+apt-get install --no-install-recommends -y curl wget rsync git software-properties-common apt-transport-https ca-certificates gnupg2 openssh-server ubuntu-keyring python3 python3-pip python3-openssl python3-wheel python3-jinja2 python3-setuptools python-is-python3 libwxgtk3.0-gtk3-0v5 libgcc-s1:i386
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
@@ -52,7 +52,7 @@ if [ ${ARCHITECTURE} == 'aarch64' ]; then
 	systemctl disable x11-common
 	systemctl disable bootlogs
 	systemctl disable console-setup
-	apt-get install -y busybox-syslogd
+	apt-get install -y busybox-syslogd python3-pip
 	dpkg --purge rsyslog
 	modprobe ip_conntrack
 else  
