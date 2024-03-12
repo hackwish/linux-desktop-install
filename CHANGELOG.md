@@ -1,3 +1,10 @@
+## [1.12.5](https://github.com/hackwish/linux-desktop-install/compare/v1.12.4...v1.12.5) (2024-02-27)
+
+
+### Bug Fixes
+
+* **install:** add addtional python packages ([8333b29](https://github.com/hackwish/linux-desktop-install/commit/8333b298a8434c40286ef1896cf8e25782d03fb4))
+
 ## [1.12.4](https://github.com/hackwish/linux-desktop-install/compare/v1.12.3...v1.12.4) (2024-02-08)
 
 
