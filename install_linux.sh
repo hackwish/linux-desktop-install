@@ -46,7 +46,7 @@ apt-get install --no-install-recommends -y curl wget rsync git software-properti
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
-if [ ${ARCHITECTURE} == 'aarch64' ]; then
+if [ ${ARCHITECTURE} == 'aarch64' ] || [${ARCHITECTURE} == 'armv7l']; then
 	echo "Quitemos lo innecesario..."
 	apt-get remove --purge -y triggerhappy anacron logrotate dphys-swapfile xserver-common lightdm
 	systemctl disable x11-common
@@ -108,10 +108,10 @@ echo "Iniciando Ansible Deploy"
 ANSIBLE_CUSTOM_DIR=`pwd`
 
 echo "Descargando Roles y Colecciones"
-ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
+ansible-galaxy role install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
-# echo "instalando colecciones"
-# ansible-galaxy collection install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
+echo "instalando colecciones"
+ansible-galaxy collection install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements.yml
 
 
 echo "Comienza Deployment con Ansible"
