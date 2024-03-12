@@ -46,7 +46,7 @@ apt-get install --no-install-recommends -y curl wget rsync git software-properti
 
 echo "Tu arquitectura es ${ARCHITECTURE}"
 
-if [ ${ARCHITECTURE} == 'aarch64' ] || [${ARCHITECTURE} == 'armv7l']; then
+if [ ${ARCHITECTURE} == 'aarch64' ] || [ ${ARCHITECTURE} == 'armv7l' ]; then
 	echo "Quitemos lo innecesario..."
 	apt-get remove --purge -y triggerhappy anacron logrotate dphys-swapfile xserver-common lightdm
 	systemctl disable x11-common
