@@ -1,7 +1,7 @@
-- name: Run common
-  import_playbook: common.yml
+- name: Run common and desktop
+  import_playbook: desktop.yml
 
-- name: Deploy Linux DevOps War machine with Ansible
+- name: Deploy Linux DevCloudOps-SRE War machine with Ansible
   hosts: devops
   become: true
 
@@ -12,36 +12,36 @@
   # terraform_ver: "0.12.20"
 
   roles:
-  - common-desktop
+  # - common-desktop
   - common-devops-desktop
   - andrewrothstein.sops
   - aws-vpn-client
-  - azure-data-studio
+  # - azure-data-studio
   - azurecli
-  - brew
   - cf-terraforming
   - cloud-sql-proxy
-  - docker
+  # - docker
+  # - droidcam
+  # - feishin
   - istioctlenv
   - k3d
   - k6
   - kops
+  - kubeseal
   - mimirtool
   - powershell
   - stern
+  # - supersonic
   - terraform-docs
   - terraformer
   - terragrunt
   - tfenv
   - tfswitch
   - velero-io
-  - droidcam
-  - supersonic
-  - feishin
   tasks:
   - name: Config git user
     shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main
     with_items: "{{ users.stdout_lines }}"
 
-  - name: Fix Docker execution without sudo #Issue #7
-    shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"
+  # - name: Fix Docker execution without sudo #Issue #7
+  #   shell: "users=$( getent passwd | awk -F: '$3 > 999 {print $1}' );for user in $users; do sudo usermod -a -G docker $user; done"
