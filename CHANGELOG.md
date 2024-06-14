@@ -1,3 +1,10 @@
+## [1.12.7](https://github.com/hackwish/linux-desktop-install/compare/v1.12.6...v1.12.7) (2024-03-12)
+
+
+### Bug Fixes
+
+* **linux_install:** Detect armv7l arch. Separate ansible roles and collection steps (for legacy compatibility) ([36c6f10](https://github.com/hackwish/linux-desktop-install/commit/36c6f1074700f98eaad418f4b27d32a070c9a90d))
+
 ## [1.12.6](https://github.com/hackwish/linux-desktop-install/compare/v1.12.5...v1.12.6) (2024-03-12)
 
 
