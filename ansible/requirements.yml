@@ -69,6 +69,9 @@ roles:
 - name: kops
   src: https://github.com/hackwish/ansible-kops.git
 
+- name: kubeseal
+  src: https://github.com/hackwish/ansible-kubeseal.git
+
 - name: mimirtool
   src: https://github.com/hackwish/ansible-mimirtool.git
 
