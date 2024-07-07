@@ -1,3 +1,15 @@
+# [1.13.0](https://github.com/hackwish/linux-desktop-install/compare/v1.12.7...v1.13.0) (2024-06-14)
+
+
+### Bug Fixes
+
+* **ansible:** Add Kubeseal on devops desktop. Change the behavior between desktop and devops envs ([545b80e](https://github.com/hackwish/linux-desktop-install/commit/545b80e262203541b33ad01469a817cb4d66897b))
+
+
+### Features
+
+* **role:** Add ignore errors on uninstall old packages. Add actions ([5646a9e](https://github.com/hackwish/linux-desktop-install/commit/5646a9ef347ab5cf4f3bcba7a2aa8a90427ee070))
+
 ## [1.12.7](https://github.com/hackwish/linux-desktop-install/compare/v1.12.6...v1.12.7) (2024-03-12)
 
 
