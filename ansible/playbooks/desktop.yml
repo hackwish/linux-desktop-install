@@ -12,7 +12,7 @@
   - brew
   - docker
   - droidcam
-  - supersonic
+  # - supersonic - temporal disable for change on install definition by source
   - feishin
 
   tasks:

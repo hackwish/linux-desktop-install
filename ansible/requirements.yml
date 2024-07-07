@@ -102,8 +102,8 @@ roles:
 - name: velero-io
   src: https://github.com/hackwish/ansible-velero-io.git
 
-- name: supersonic
-  src: https://github.com/hackwish/ansible-supersonic.git
+# - name: supersonic
+#   src: https://github.com/hackwish/ansible-supersonic.git
 
 - name: feishin
   src: https://github.com/hackwish/ansible-feishin.git
