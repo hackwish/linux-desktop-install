@@ -1,5 +1,5 @@
-- name: Run common on MAC
-  import_playbook: mac-common.yml
+- name: Run desktop on MAC
+  import_playbook: mac-desktop.yml
 
 - name: Deploy MacOS DevOps War machine with Ansible
   hosts: mac
@@ -11,8 +11,6 @@
     #   - "/usr/local/share/zsh/site-functions"
 
   roles:
-    - common-mac-desktop
     - common-mac-devops-desktop
-    - k6
 
   tasks:

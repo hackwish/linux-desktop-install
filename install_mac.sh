@@ -22,13 +22,13 @@ append_to_zshrc() {
     zshrc="$HOME/.zshrc"
   fi
 
-  if ! grep -Fqs "$text" "$zshrc"; then
-    if [ "$skip_new_line" -eq 1 ]; then
-      printf "%s\\n" "$text" >> "$zshrc"
-    else
-      printf "\\n%s\\n" "$text" >> "$zshrc"
-    fi
-  fi
+  # if ! grep -Fqs "$text" "$zshrc"; then
+  #   if [ "$skip_new_line" -eq 1 ]; then
+  #     printf "%s\\n" "$text" >> "$zshrc"
+  #   else
+  #     printf "\\n%s\\n" "$text" >> "$zshrc"
+  #   fi
+  # fi
 }
 
 # shellcheck disable=SC2154
@@ -92,7 +92,6 @@ if [ "$(uname -m)" = "arm64" ]
   fi
 fi
 
-
 gem_install_or_update() {
   if gem list "$1" --installed > /dev/null; then
     gem update "$@"
@@ -128,17 +127,7 @@ brew "git"
 brew "go"
 brew "libmagic"
 brew "openssl"
-brew "rcm"
-brew "readline"
-brew "reattach-to-user-namespace"
-brew "the_silver_searcher"
-brew "tmux"
 brew "universal-ctags"
-brew "vim"
-brew "watch"
-brew "watchman"
-brew "xz"
-brew "zsh"
 EOF
 
 fancy_echo "Configuring asdf version manager ..."
