@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/hackwish/linux-desktop-install/compare/v1.14.2...v1.14.3) (2024-07-28)
+
+
+### Bug Fixes
+
+* **install-mac:** update installer. Chemge order to exec playbooks for mac ([8d66450](https://github.com/hackwish/linux-desktop-install/commit/8d66450d9fc8fac3426802d1587d456a16ad4bff))
+
 ## [1.14.2](https://github.com/hackwish/linux-desktop-install/compare/v1.14.1...v1.14.2) (2024-07-28)
 
 
