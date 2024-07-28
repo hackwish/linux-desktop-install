@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/hackwish/linux-desktop-install/compare/v1.13.1...v1.14.0) (2024-07-28)
+
+
+### Features
+
+* **mac-install:** Up-to-date Mac script installer ([90ada4d](https://github.com/hackwish/linux-desktop-install/commit/90ada4d0feaa568e03a9ea44277bdeb5eb4e21a6))
+
 ## [1.13.1](https://github.com/hackwish/linux-desktop-install/compare/v1.13.0...v1.13.1) (2024-07-07)
 
 
