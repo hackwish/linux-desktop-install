@@ -104,17 +104,11 @@ gem_install_or_update() {
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
   rm -rf $HOME/homebrew
-  git clone https://github.com/Homebrew/brew $HOME/homebrew
-  eval "$($HOME/homebrew/bin/brew shellenv)"
-  append_to_zshrc '# recommended by brew doctor'
+    /bin/bash -c \
+      "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    append_to_zshrc "eval \"\$($HOMEBREW_PREFIX/bin/brew shellenv)\""
 
-  # shellcheck disable=SC2016
-  append_to_zshrc 'export PATH="/usr/local/bin:$PATH"' 1
-  append_to_zshrc 'export PATH="/usr/local/sbin:$PATH"' 1
-  append_to_zshrc 'export PATH="$HOME/homebrew/bin:$PATH"' 1
-
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="$HOME/homebrew/bin:$PATH"
+    export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 fi
 
 if brew list | grep -Fq brew-cask; then
