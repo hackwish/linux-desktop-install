@@ -103,7 +103,6 @@ gem_install_or_update() {
 
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
-  rm -rf $HOME/homebrew
     /bin/bash -c \
       "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     append_to_zshrc "eval \"\$($HOMEBREW_PREFIX/bin/brew shellenv)\""
@@ -118,30 +117,28 @@ fi
 
 fancy_echo "Updating Homebrew formulae ..."
 brew update --force # https://github.com/Homebrew/brew/issues/1151
-chmod -R go-w "$(brew --prefix)/share/zsh"
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
 tap "heroku/brew"
 
 # Unix
-brew "universal-ctags"
+brew "gcc"
 brew "git"
+brew "go"
+brew "libmagic"
 brew "openssl"
 brew "rcm"
+brew "readline"
 brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
 brew "tmux"
+brew "universal-ctags"
 brew "vim"
-brew "watchman"
-brew "zsh"
-brew "go"
-brew "ngrok"
 brew "watch"
-brew "gcc"
-brew "readline"
+brew "watchman"
 brew "xz"
-brew "libmagic"
+brew "zsh"
 EOF
 
 fancy_echo "Configuring asdf version manager ..."
