@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/hackwish/linux-desktop-install/compare/v1.13.0...v1.13.1) (2024-07-07)
+
+
+### Bug Fixes
+
+* **desktop-install:** remove supersonic for change on url package by source ([ce011e7](https://github.com/hackwish/linux-desktop-install/commit/ce011e733c4fdd2065ecca6283631d59cf0f7edb))
+
 # [1.13.0](https://github.com/hackwish/linux-desktop-install/compare/v1.12.7...v1.13.0) (2024-06-14)
 
 
