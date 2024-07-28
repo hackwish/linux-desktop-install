@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/hackwish/linux-desktop-install/compare/v1.14.1...v1.14.2) (2024-07-28)
+
+
+### Bug Fixes
+
+* **install-mac:** update installer ([a412f47](https://github.com/hackwish/linux-desktop-install/commit/a412f47ed4732f87c196817157e506cf0dbbc691))
+
 ## [1.14.1](https://github.com/hackwish/linux-desktop-install/compare/v1.14.0...v1.14.1) (2024-07-28)
 
 
