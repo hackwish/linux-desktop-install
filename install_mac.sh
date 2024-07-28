@@ -4,6 +4,7 @@
 # Others sources:
 # https://gist.github.com/EmanuelCadems/0a600dfb692213d88b0ce91ddf0fb0b2
 # https://gist.github.com/mrlesmithjr/f3c15fdd53020a71f55c2032b8be2eda
+
 fancy_echo() {
   local fmt="$1"; shift
 
@@ -46,40 +47,51 @@ fi
 # shellcheck disable=SC2016
 append_to_zshrc 'export PATH="$HOME/.bin:$PATH"'
 
-HOMEBREW_PREFIX="$HOME/homebrew"
+# Determine Homebrew prefix
+arch="$(uname -m)"
+if [ "$arch" = "arm64" ]; then
+  HOMEBREW_PREFIX="/opt/homebrew"
+else
+  HOMEBREW_PREFIX="/usr/local"
+fi
 
-# if [ -d "$HOMEBREW_PREFIX" ]; then
-#   if ! [ -r "$HOMEBREW_PREFIX" ]; then
-#     sudo chown -R "$LOGNAME:admin" /usr/local
-#   fi
-# else
-#   sudo mkdir "$HOMEBREW_PREFIX"
-#   sudo chflags norestricted "$HOMEBREW_PREFIX"
-#   sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
-# fi
+update_shell() {
+  local shell_path;
+  shell_path="$(command -v zsh)"
 
-# update_shell() {
-#   local shell_path;
-#   shell_path="$(command -v zsh)"
+  fancy_echo "Changing your shell to zsh ..."
+  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    fancy_echo "Adding '$shell_path' to /etc/shells"
+    sudo sh -c "echo $shell_path >> /etc/shells"
+  fi
+  sudo chsh -s "$shell_path" "$USER"
+}
 
-#   fancy_echo "Changing your shell to zsh ..."
-#   if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
-#     fancy_echo "Adding '$shell_path' to /etc/shells"
-#     sudo sh -c "echo $shell_path >> /etc/shells"
-#   fi
-#   sudo chsh -s "$shell_path" "$USER"
-# }
+case "$SHELL" in
+  */zsh)
+    if [ "$(command -v zsh)" != "$HOMEBREW_PREFIX/bin/zsh" ] ; then
+      update_shell
+    fi
+    ;;
+  *)
+    update_shell
+    ;;
+esac
 
-# case "$SHELL" in
-#   */zsh)
-#     if [ "$(command -v zsh)" != '/usr/local/bin/zsh' ] ; then
-#       update_shell
-#     fi
-#     ;;
-#   *)
-#     update_shell
-#     ;;
-# esac
+# checks architecture
+if [ "$(uname -m)" = "arm64" ]
+  then
+  # checks if Rosetta is already installed
+  if ! pkgutil --pkg-info=com.apple.pkg.RosettaUpdateAuto > /dev/null 2>&1
+  then
+    echo "Installing Rosetta"
+    # Installs Rosetta2
+    softwareupdate --install-rosetta --agree-to-license
+  else
+    echo "Rosetta is installed"
+  fi
+fi
+
 
 gem_install_or_update() {
   if gem list "$1" --installed > /dev/null; then
@@ -105,28 +117,43 @@ if ! command -v brew >/dev/null; then
   export PATH="$HOME/homebrew/bin:$PATH"
 fi
 
+if brew list | grep -Fq brew-cask; then
+  fancy_echo "Uninstalling old Homebrew-Cask ..."
+  brew uninstall --force brew-cask
+fi
+
 fancy_echo "Updating Homebrew formulae ..."
-brew update --force --quiet
+brew update --force # https://github.com/Homebrew/brew/issues/1151
 chmod -R go-w "$(brew --prefix)/share/zsh"
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-brew "git"
-brew "ansible"
-EOF
+tap "heroku/brew"
 
-# fancy_echo "Update heroku binary ..."
-# brew unlink heroku
-# brew link --force heroku
+# Unix
+brew "universal-ctags"
+brew "git"
+brew "openssl"
+brew "rcm"
+brew "reattach-to-user-namespace"
+brew "the_silver_searcher"
+brew "tmux"
+brew "vim"
+brew "watchman"
+brew "zsh"
+brew "go"
+brew "ngrok"
+brew "watch"
+brew "gcc"
+brew "readline"
+brew "xz"
+brew "libmagic"
+EOF
 
 fancy_echo "Configuring asdf version manager ..."
 if [ ! -d "$HOME/.asdf" ]; then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-  append_to_zshrc "source $HOME/.asdf/asdf.sh" 1
+  brew install asdf
+  append_to_zshrc "source $(brew --prefix asdf)/libexec/asdf.sh" 1
 fi
 
 alias install_asdf_plugin=add_or_update_asdf_plugin
@@ -141,8 +168,8 @@ add_or_update_asdf_plugin() {
   fi
 }
 
-# shellcheck disable=SC1090
-source "$HOME/.asdf/asdf.sh"
+# shellcheck disable=SC1091
+. "$(brew --prefix asdf)/libexec/asdf.sh"
 add_or_update_asdf_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
 add_or_update_asdf_plugin "nodejs" "https://github.com/asdf-vm/asdf-nodejs.git"
 
@@ -163,10 +190,6 @@ gem update --system
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
-# fancy_echo "Installing latest Node ..."
-# bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
-# install_asdf_language "nodejs"
-
 if ! [ -d ~/.oh-my-zsh ]
 then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -174,27 +197,8 @@ fi
 
 sed -i -e 's/plugins=(git)/plugins=(git asdf rails bundler ruby)/g' ~/.zshrc
 
-# if ! [ -f ~/Library/Fonts/Roboto\ Mono\ for\ Powerline.ttf ]
-# then
-#   fancy_echo "Installing Powerline fonts"
-#     git clone https://github.com/powerline/fonts
-#     # install
-#     ./fonts/install.sh
-#     # clean-up a bit
-#     rm -rf fonts
-# fi
-
 # Custom oh-my-zsh theme
 sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="pygmalion"/g' ~/.zshrc
-
-# Add Custom config on zshrc
-# if [[ $(cat ~/.zshrc | grep 'NVM_DIR') == "" ]]; then
-#   cat <<EOT >> ~/.zshrc
-#   # Add custom NVM configs
-#   export NVM_DIR=~/.nvm
-#   source $(brew --prefix nvm)/nvm.sh
-# EOT
-# fi
 
 # if [[ $(cat ~/.zshrc | grep 'LC_ALL') == "" ]]; then
 #   cat <<EOT >> ~/.zshrc
@@ -209,20 +213,9 @@ sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="pygmalion"/g' ~/.zshrc
 # chmod -R 644 /usr/local/share/zsh
 # sudo chmod -R 644 /usr/local/share/zsh/site-functions
 
-# if ! [ -d ~/.oh-my-zsh/custom/themes/powerlevel9k ]
-# then
-#     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-#     sed -i -e 's/ZSH_THEME=robbyrussell/ZSH_THEME=powerlevel9k\/powerlevel9k/g' ~/.zshrc
-# fi
-
-# if [ -f "$HOME/.laptop.local" ]; then
-#   fancy_echo "Running your customizations from ~/.laptop.local ..."
-#   # shellcheck disable=SC1090
-#   . "$HOME/.laptop.local"
-# fi
-
 #Ansible
 echo "Iniciando Ansible Deploy"
+brew "ansible"
 ANSIBLE_CUSTOM_DIR=`pwd`
 
 echo "instalando colecciones"
