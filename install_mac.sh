@@ -22,13 +22,13 @@ append_to_zshrc() {
     zshrc="$HOME/.zshrc"
   fi
 
-  # if ! grep -Fqs "$text" "$zshrc"; then
-  #   if [ "$skip_new_line" -eq 1 ]; then
-  #     printf "%s\\n" "$text" >> "$zshrc"
-  #   else
-  #     printf "\\n%s\\n" "$text" >> "$zshrc"
-  #   fi
-  # fi
+  if ! grep -Fqs "$text" "$zshrc"; then
+    if [ "$skip_new_line" -eq 1 ]; then
+      printf "%s\\n" "$text" >> "$zshrc"
+    else
+      printf "\\n%s\\n" "$text" >> "$zshrc"
+    fi
+  fi
 }
 
 # shellcheck disable=SC2154
@@ -195,7 +195,7 @@ sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="pygmalion"/g' ~/.zshrc
 
 #Ansible
 echo "Iniciando Ansible Deploy"
-brew "ansible"
+brew install ansible
 ANSIBLE_CUSTOM_DIR=`pwd`
 
 echo "instalando colecciones"
