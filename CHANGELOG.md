@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/hackwish/linux-desktop-install/compare/v1.14.4...v1.15.0) (2024-09-05)
+
+
+### Features
+
+* **linux-install:** add noble compatibility ([b1ebecf](https://github.com/hackwish/linux-desktop-install/commit/b1ebecfcf3858a0896791d7870259a08d37f625f))
+
 ## [1.14.4](https://github.com/hackwish/linux-desktop-install/compare/v1.14.3...v1.14.4) (2024-07-28)
 
 
