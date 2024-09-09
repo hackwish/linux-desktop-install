@@ -13,7 +13,7 @@
   - docker
   - droidcam
   # - supersonic - temporal disable for change on install definition by source
-  - feishin
+  # - feishin
 
   tasks:
   - name: Fix Docker execution without sudo #Issue #7
