@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/hackwish/linux-desktop-install/compare/v1.15.1...v1.15.2) (2024-09-09)
+
+
+### Bug Fixes
+
+* **desktop:** disable feishin role ([f2dec7a](https://github.com/hackwish/linux-desktop-install/commit/f2dec7a687ca868c288acb3ed6a63d5e7fc8b4ce))
+
 ## [1.15.1](https://github.com/hackwish/linux-desktop-install/compare/v1.15.0...v1.15.1) (2024-09-07)
 
 
