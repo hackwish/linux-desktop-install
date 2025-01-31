@@ -71,7 +71,7 @@ echo "Ahora vamos a adecuar la instalación..."
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
 # Linux Mint distros
-if [ ${DISTRIB_CODENAME} == 'wilma' ]; then
+if [ ${DISTRIB_CODENAME} == 'wilma' ] || [ ${DISTRIB_CODENAME} == 'xia' ]; then
         echo $DISTRIB_CODENAME
         export DISTRIB_CODENAME='noble'
 elif [ ${DISTRIB_CODENAME} == 'vanessa' ] || [ ${DISTRIB_CODENAME} == 'vera' ] || [ ${DISTRIB_CODENAME} == 'victoria' ] || [ ${DISTRIB_CODENAME} == 'virginia' ]; then
