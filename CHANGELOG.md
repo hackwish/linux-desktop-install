@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/hackwish/linux-desktop-install/compare/v1.15.2...v1.15.3) (2025-01-29)
+
+
+### Bug Fixes
+
+* **tasks:** update packages ([25a8962](https://github.com/hackwish/linux-desktop-install/commit/25a896219effa98df27f878435763df1fa407d9e))
+
 ## [1.15.2](https://github.com/hackwish/linux-desktop-install/compare/v1.15.1...v1.15.2) (2024-09-09)
 
 
