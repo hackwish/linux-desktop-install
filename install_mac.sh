@@ -199,11 +199,11 @@ brew install ansible
 ANSIBLE_CUSTOM_DIR=`pwd`
 
 echo "instalando colecciones"
-ansible-galaxy collection install ansible.posix
-ansible-galaxy collection install community.docker
-ansible-galaxy collection install community.general
-ansible-galaxy collection install community.sops
-ansible-galaxy collection install kubernetes.core
+ansible-galaxy collection install --force ansible.posix
+ansible-galaxy collection install --force community.docker
+ansible-galaxy collection install --force community.general
+ansible-galaxy collection install --force community.sops
+ansible-galaxy collection install --force kubernetes.core
 
 echo "Descargando roles"
 ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements_mac.yml
