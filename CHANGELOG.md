@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/hackwish/linux-desktop-install/compare/v1.15.3...v1.15.4) (2025-01-31)
+
+
+### Bug Fixes
+
+* **linux:** add mint xia codename ([9e843a2](https://github.com/hackwish/linux-desktop-install/commit/9e843a2eebe3c4facaa9861d3d19e2b1359452d9))
+
 ## [1.15.3](https://github.com/hackwish/linux-desktop-install/compare/v1.15.2...v1.15.3) (2025-01-29)
 
 
