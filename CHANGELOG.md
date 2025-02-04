@@ -1,3 +1,10 @@
+## [1.15.5](https://github.com/hackwish/linux-desktop-install/compare/v1.15.4...v1.15.5) (2025-02-04)
+
+
+### Bug Fixes
+
+* **mac:** add force on mac ansible collections ([4460610](https://github.com/hackwish/linux-desktop-install/commit/4460610451bf1e0396a1a2db24de951daa6cd227))
+
 ## [1.15.4](https://github.com/hackwish/linux-desktop-install/compare/v1.15.3...v1.15.4) (2025-01-31)
 
 
