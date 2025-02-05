@@ -110,6 +110,9 @@ roles:
 - name: feishin
   src: https://github.com/hackwish/ansible-feishin.git
 
+- name: lmstudio
+  src: https://github.com/hackwish/ansible-lmstudio.git
+  
 # Community roles
 - name: andrewrothstein.sops
   src: andrewrothstein.sops

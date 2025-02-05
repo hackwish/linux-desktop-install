@@ -12,5 +12,6 @@
 
   roles:
     - common-mac-desktop
+    - lmstudio
 
   tasks:

@@ -7,3 +7,6 @@
 
 - name: common-mac-devops-desktop
   src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
+
+- name: lmstudio
+  src: https://github.com/hackwish/ansible-lmstudio.git
