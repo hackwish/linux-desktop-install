@@ -1,3 +1,10 @@
+## [1.17.2](https://github.com/hackwish/linux-desktop-install/compare/v1.17.1...v1.17.2) (2025-02-06)
+
+
+### Bug Fixes
+
+* **mac:** change roles and collection install phase ([b5dc32a](https://github.com/hackwish/linux-desktop-install/commit/b5dc32a4520f12f0fd80dcea404fb660a800f623))
+
 ## [1.17.1](https://github.com/hackwish/linux-desktop-install/compare/v1.17.0...v1.17.1) (2025-02-06)
 
 
