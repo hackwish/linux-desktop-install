@@ -1,12 +1,12 @@
 collections:
 - ansible.posix
 - community.docker
-- community.general
+# - community.general
 - community.sops
 - kubernetes.core
 
-# - name: community.general
-#   version: 6.0.0
+- name: community.general
+  version: 6.0.0
 
 roles:
 # Common roles
