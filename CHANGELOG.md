@@ -1,3 +1,10 @@
+## [1.17.3](https://github.com/hackwish/linux-desktop-install/compare/v1.17.2...v1.17.3) (2025-02-06)
+
+
+### Bug Fixes
+
+* **mac:** add aws-client-vpn role on mac ([6f0c38b](https://github.com/hackwish/linux-desktop-install/commit/6f0c38b63f2b0fc37ffa4434e002fe416fe0d195))
+
 ## [1.17.2](https://github.com/hackwish/linux-desktop-install/compare/v1.17.1...v1.17.2) (2025-02-06)
 
 
