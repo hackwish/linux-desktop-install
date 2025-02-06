@@ -1,3 +1,11 @@
+## [1.17.1](https://github.com/hackwish/linux-desktop-install/compare/v1.17.0...v1.17.1) (2025-02-06)
+
+
+### Performance Improvements
+
+* **repo:** Start process simplify. Order and reduce requeriments. Add shared roles ([8fd101f](https://github.com/hackwish/linux-desktop-install/commit/8fd101f8441dcd64f57cb935e4e312780e234194))
+* **repo:** Start process simplify. Order and reduce requeriments. Add shared roles ([d71756f](https://github.com/hackwish/linux-desktop-install/commit/d71756fab4db01edd0bd258cc8055b7fb0a883cc))
+
 # [1.17.0](https://github.com/hackwish/linux-desktop-install/compare/v1.16.0...v1.17.0) (2025-02-06)
 
 
