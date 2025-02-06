@@ -198,29 +198,27 @@ echo "Iniciando Ansible Deploy"
 brew install ansible
 ANSIBLE_CUSTOM_DIR=`pwd`
 
-echo "instalando colecciones"
-ansible-galaxy collection install --force ansible.posix
-ansible-galaxy collection install --force community.docker
-ansible-galaxy collection install --force community.general
-ansible-galaxy collection install --force community.sops
-ansible-galaxy collection install --force kubernetes.core
+echo "Instalando roles"
+ansible-galaxy role install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements_mac.yml
 
-echo "Descargando roles"
-ansible-galaxy install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements_mac.yml
-
-# echo "Comienza Deployment con Ansible"
-# ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/mac.yml
+echo "Instalando colecciones"
+ansible-galaxy collection install --force -r ${ANSIBLE_CUSTOM_DIR}/ansible/requirements_mac.yml
 
 echo "Comienza Deployment con Ansible"
 echo "Opciones de Instalación: "
 
-OPCIONES="desktop devops salir"
+OPCIONES="base desktop devops salir"
 
 PS3="Selecciona una opción: " 
 
 select installer in $OPCIONES;
 do
   case $installer in
+	base)
+		echo "Se inicia la instalación de $installer"
+		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/mac-common.yml
+        break
+		;;
 	desktop)
 		echo "Se inicia la instalación de $installer"
 		ansible-playbook -vv -i ${ANSIBLE_CUSTOM_DIR}/ansible/hosts ${ANSIBLE_CUSTOM_DIR}/ansible/playbooks/mac-desktop.yml

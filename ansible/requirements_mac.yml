@@ -1,4 +1,14 @@
----
+collections:
+- ansible.posix
+- community.docker
+# - community.general
+- community.sops
+- kubernetes.core
+
+- name: community.general
+  version: 6.0.0
+
+roles:
 - name: common-mac
   src: https://github.com/hackwish/ansible-common-mac.git
 
