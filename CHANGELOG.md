@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/hackwish/linux-desktop-install/compare/v1.16.0...v1.17.0) (2025-02-06)
+
+
+### Features
+
+* **ansible:** Add input leap role ([5b9934b](https://github.com/hackwish/linux-desktop-install/commit/5b9934b0ae2bb331bcf8922e410e6b1c9c3e66ff))
+
 # [1.16.0](https://github.com/hackwish/linux-desktop-install/compare/v1.15.5...v1.16.0) (2025-02-05)
 
 
