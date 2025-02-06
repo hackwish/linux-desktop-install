@@ -10,3 +10,6 @@
 
 - name: lmstudio
   src: https://github.com/hackwish/ansible-lmstudio.git
+
+- name: inputleap
+  src: https://github.com/hackwish/ansible-inputleap.git

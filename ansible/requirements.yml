@@ -112,6 +112,9 @@ roles:
 
 - name: lmstudio
   src: https://github.com/hackwish/ansible-lmstudio.git
+
+- name: inputleap
+  src: https://github.com/hackwish/ansible-inputleap.git
   
 # Community roles
 - name: andrewrothstein.sops
