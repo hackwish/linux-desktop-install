@@ -1,12 +1,12 @@
 collections:
 - ansible.posix
 - community.docker
-# - community.general
+- community.general
 - community.sops
 - kubernetes.core
 
-- name: community.general
-  version: 6.0.0
+# - name: community.general
+#   version: 6.0.0
 
 roles:
 # Common roles
@@ -19,14 +19,14 @@ roles:
 - name: common-devops-desktop
   src: https://github.com/hackwish/ansible-common-devops-desktop.git
 
-- name: common-mac
-  src: https://github.com/hackwish/ansible-common-mac.git
+# - name: common-mac
+#   src: https://github.com/hackwish/ansible-common-mac.git
 
-- name: common-mac-desktop
-  src: https://github.com/hackwish/ansible-common-mac-desktop.git
+# - name: common-mac-desktop
+#   src: https://github.com/hackwish/ansible-common-mac-desktop.git
 
-- name: common-mac-devops-desktop
-  src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
+# - name: common-mac-devops-desktop
+#   src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
 
 - name: common-server
   src: https://github.com/hackwish/ansible-common-server.git
@@ -34,45 +34,43 @@ roles:
 - name: common-tv
   src: https://github.com/hackwish/ansible-common-tv.git
 
+# MultiOS Roles
+## Tools Roles
+- name: docker
+  src: https://github.com/hackwish/ansible-docker.git
+
+- name: lmstudio
+  src: https://github.com/hackwish/ansible-lmstudio.git
+
+- name: inputleap
+  src: https://github.com/hackwish/ansible-inputleap.git
+
 # App Roles
+## Cloud Roles
 - name: aws-vpn-client
   src: https://github.com/hackwish/ansible-aws-vpn-client.git
 
-- name: azure-data-studio
-  src: https://github.com/hackwish/ansible-azure-data-studio.git
+# - name: azure-data-studio
+#   src: https://github.com/hackwish/ansible-azure-data-studio.git
 
 - name: azurecli
   src: https://github.com/hackwish/ansible-role-azurecli.git
 
-- name: brew
-  src: https://github.com/hackwish/ansible-brew.git
-
-- name: cf-terraforming
-  src: https://github.com/hackwish/ansible-cf-terraforming.git
+# - name: ibmcloud
+#   src: https://github.com/hackwish/ansible-ibmcloud.git
 
 - name: cloud-sql-proxy
   src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
 
-- name: docker
-  src: https://github.com/hackwish/ansible-docker.git
+## Tool Roles
+- name: brew
+  src: https://github.com/hackwish/ansible-brew.git
 
 - name: droidcam
   src: https://github.com/hackwish/ansible-droidcam.git
 
-- name: istioctlenv
-  src: https://github.com/hackwish/ansible-istioctlenv.git
-
-- name: k3d
-  src: https://github.com/hackwish/ansible-k3d.git
-
 - name: k6
   src: https://github.com/hackwish/ansible-k6.git
-
-- name: kops
-  src: https://github.com/hackwish/ansible-kops.git
-
-- name: kubeseal
-  src: https://github.com/hackwish/ansible-kubeseal.git
 
 - name: mimirtool
   src: https://github.com/hackwish/ansible-mimirtool.git
@@ -85,6 +83,28 @@ roles:
 
 - name: stern
   src: https://github.com/hackwish/ansible-stern.git
+
+# - name: supersonic
+#   src: https://github.com/hackwish/ansible-supersonic.git
+
+# - name: feishin
+#   src: https://github.com/hackwish/ansible-feishin.git
+
+# - name: netdata
+#   src: https://github.com/hackwish/ansible-netdata.git
+
+# - name: plank
+#   src: https://github.com/hackwish/ansible-plank.git
+
+# - name: anydesk
+#   src: https://github.com/hackwish/ansible-anydesk.git
+
+# - name: capistrano
+#   src: https://github.com/hackwish/ansible-capistrano.git
+
+### Terraform Roles
+- name: cf-terraforming
+  src: https://github.com/hackwish/ansible-cf-terraforming.git
 
 - name: terraform-docs
   src: https://github.com/hackwish/ansible-terraform-docs.git
@@ -101,64 +121,21 @@ roles:
 - name: tfswitch
   src: https://github.com/hackwish/ansible-tfswitch.git
 
+### Kubernetes Roles
+- name: istioctlenv
+  src: https://github.com/hackwish/ansible-istioctlenv.git
+
+- name: k3d
+  src: https://github.com/hackwish/ansible-k3d.git
+
+- name: kops
+  src: https://github.com/hackwish/ansible-kops.git
+
+- name: kubeseal
+  src: https://github.com/hackwish/ansible-kubeseal.git
+
 - name: velero-io
   src: https://github.com/hackwish/ansible-velero-io.git
-
-# - name: supersonic
-#   src: https://github.com/hackwish/ansible-supersonic.git
-
-- name: feishin
-  src: https://github.com/hackwish/ansible-feishin.git
-
-- name: lmstudio
-  src: https://github.com/hackwish/ansible-lmstudio.git
-
-- name: inputleap
-  src: https://github.com/hackwish/ansible-inputleap.git
-  
-# Community roles
-- name: andrewrothstein.sops
-  src: andrewrothstein.sops
-
-# - name: cloudalchemy.node-exporter
-#   src: cloudalchemy.node_exporter
-
-# - name: netdata
-#   src: https://github.com/hackwish/ansible-netdata.git
-
-#- name: bihealth.python3
-#  src: bihealth.python3
-
-# - name: andrewrothstein.vagrant
-#   src: andrewrothstein.vagrant
-
-# - name: fesaille.gh
-#   src: fesaille.gh
-
-
-# - name: grzegorznowak.nvm_node
-#   src: grzegorznowak.nvm_node
-
-
-
-# - name: plank
-#   src: https://github.com/hackwish/ansible-plank.git
-
-
-
-
-
-
-
-# - name: anydesk
-#   src: https://github.com/hackwish/ansible-anydesk.git
-
-
-
-
-
-# - name: andrewrothstein.terraform
-#   src: andrewrothstein.terraform
 
 # - name: rke
 #   src: https://github.com/hackwish/ansible-rke.git
@@ -169,12 +146,27 @@ roles:
 # - name: rancher2-cli
 #   src: https://github.com/hackwish/ansible-rancher2-cli.git
 
-# - name: capistrano
-#   src: https://github.com/hackwish/ansible-capistrano.git
+# Community roles
+- name: andrewrothstein.sops
+  src: andrewrothstein.sops
 
-# - name: ibmcloud
-#   src: https://github.com/hackwish/ansible-ibmcloud.git
+# - name: cloudalchemy.node-exporter
+#   src: cloudalchemy.node_exporter
 
+#- name: bihealth.python3
+#  src: bihealth.python3
+
+# - name: andrewrothstein.vagrant
+#   src: andrewrothstein.vagrant
+
+# - name: fesaille.gh
+#   src: fesaille.gh
+
+# - name: grzegorznowak.nvm_node
+#   src: grzegorznowak.nvm_node
+
+# - name: andrewrothstein.terraform
+#   src: andrewrothstein.terraform
 
 
 

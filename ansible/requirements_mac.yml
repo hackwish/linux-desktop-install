@@ -13,3 +13,6 @@
 
 - name: inputleap
   src: https://github.com/hackwish/ansible-inputleap.git
+
+- name: docker
+  src: https://github.com/hackwish/ansible-docker.git

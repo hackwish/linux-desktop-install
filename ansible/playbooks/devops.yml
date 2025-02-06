@@ -12,17 +12,18 @@
   # terraform_ver: "0.12.20"
 
   roles:
-  # - common-desktop
-  - common-devops-desktop
-  - andrewrothstein.sops
-  - aws-vpn-client
   # - azure-data-studio
-  - azurecli
-  - cf-terraforming
-  - cloud-sql-proxy
+  # - common-desktop
   # - docker
   # - droidcam
   # - feishin
+  # - supersonic
+  - andrewrothstein.sops
+  - aws-vpn-client
+  - azurecli
+  - cf-terraforming
+  - cloud-sql-proxy
+  - common-devops-desktop
   - istioctlenv
   - k3d
   - k6
@@ -31,7 +32,6 @@
   - mimirtool
   - powershell
   - stern
-  # - supersonic
   - terraform-docs
   - terraformer
   - terragrunt
