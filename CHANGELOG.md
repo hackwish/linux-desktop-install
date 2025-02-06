@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/hackwish/linux-desktop-install/compare/v1.15.5...v1.16.0) (2025-02-05)
+
+
+### Features
+
+* **ansible:** Add LMStudio role ([5b3f461](https://github.com/hackwish/linux-desktop-install/commit/5b3f4614c6aaff5db45ccbe4787c08260f11b2c0))
+
 ## [1.15.5](https://github.com/hackwish/linux-desktop-install/compare/v1.15.4...v1.15.5) (2025-02-04)
 
 
