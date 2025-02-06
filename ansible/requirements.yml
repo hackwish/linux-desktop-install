@@ -35,6 +35,10 @@ roles:
   src: https://github.com/hackwish/ansible-common-tv.git
 
 # MultiOS Roles
+## Cloud Roles
+- name: aws-vpn-client
+  src: https://github.com/hackwish/ansible-aws-vpn-client.git
+
 ## Tools Roles
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
@@ -47,9 +51,6 @@ roles:
 
 # App Roles
 ## Cloud Roles
-- name: aws-vpn-client
-  src: https://github.com/hackwish/ansible-aws-vpn-client.git
-
 # - name: azure-data-studio
 #   src: https://github.com/hackwish/ansible-azure-data-studio.git
 

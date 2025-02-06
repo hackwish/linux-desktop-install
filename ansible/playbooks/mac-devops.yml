@@ -6,11 +6,9 @@
   become: false
 
   vars:
-    # ohmyzsh_folders:
-    #   - "/usr/local/share/zsh"
-    #   - "/usr/local/share/zsh/site-functions"
 
   roles:
     - common-mac-devops-desktop
+    - aws-vpn-client
 
   tasks:

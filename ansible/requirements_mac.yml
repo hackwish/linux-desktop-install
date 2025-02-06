@@ -26,3 +26,6 @@ roles:
 
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
+
+- name: aws-vpn-client
+  src: https://github.com/hackwish/ansible-aws-vpn-client.git
