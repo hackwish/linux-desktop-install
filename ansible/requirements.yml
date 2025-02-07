@@ -39,6 +39,15 @@ roles:
 - name: aws-vpn-client
   src: https://github.com/hackwish/ansible-aws-vpn-client.git
 
+- name: azurecli
+  src: https://github.com/hackwish/ansible-role-azurecli.git
+
+- name: cloud-sql-proxy
+  src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
+
+- name: mimirtool
+  src: https://github.com/hackwish/ansible-mimirtool.git
+
 ## Tools Roles
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
@@ -49,32 +58,28 @@ roles:
 - name: inputleap
   src: https://github.com/hackwish/ansible-inputleap.git
 
+
 # App Roles
 ## Cloud Roles
 # - name: azure-data-studio
 #   src: https://github.com/hackwish/ansible-azure-data-studio.git
 
-- name: azurecli
-  src: https://github.com/hackwish/ansible-role-azurecli.git
+
 
 # - name: ibmcloud
 #   src: https://github.com/hackwish/ansible-ibmcloud.git
 
-- name: cloud-sql-proxy
-  src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
+
 
 ## Tool Roles
-- name: brew
-  src: https://github.com/hackwish/ansible-brew.git
+# - name: brew
+#   src: https://github.com/hackwish/ansible-brew.git
 
 - name: droidcam
   src: https://github.com/hackwish/ansible-droidcam.git
 
 - name: k6
   src: https://github.com/hackwish/ansible-k6.git
-
-- name: mimirtool
-  src: https://github.com/hackwish/ansible-mimirtool.git
 
 - name: ohmyzsh
   src: https://github.com/hackwish/ansible-ohmyzsh.git

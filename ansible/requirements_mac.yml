@@ -9,6 +9,7 @@ collections:
   version: 6.0.0
 
 roles:
+# Common roles
 - name: common-mac
   src: https://github.com/hackwish/ansible-common-mac.git
 
@@ -18,6 +19,7 @@ roles:
 - name: common-mac-devops-desktop
   src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
 
+# Common Tools Roles
 - name: lmstudio
   src: https://github.com/hackwish/ansible-lmstudio.git
 
@@ -27,5 +29,15 @@ roles:
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
 
+# DevOps Cloud Roles
 - name: aws-vpn-client
   src: https://github.com/hackwish/ansible-aws-vpn-client.git
+
+- name: azurecli
+  src: https://github.com/hackwish/ansible-role-azurecli.git
+
+- name: cloud-sql-proxy
+  src: https://github.com/hackwish/ansible-cloud-sql-proxy.git
+
+- name: mimirtool
+  src: https://github.com/hackwish/ansible-mimirtool.git

@@ -10,5 +10,8 @@
   roles:
     - common-mac-devops-desktop
     - aws-vpn-client
+    - azurecli
+    - cloud-sql-proxy
+    - mimirtool
 
   tasks:

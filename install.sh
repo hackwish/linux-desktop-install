@@ -1,23 +1,21 @@
 #!/bin/bash
 ##
 
-echo ""
-echo "Bienvenid@ a ByDefault Asimilation"
 echo "
-==============================
-| ...Resistance is Futile... |
-=============================="
+============================
+| ByDefault Meta-Installer |
+============================"
 echo ""
-echo "Antes de empezar, detectemos tu OS..."
+echo "Before we start, let's detect your OS..."
 echo ""
 
 OS=`uname`
 
 if [[ $OS == "Darwin" ]]; then
     echo $OS
-    echo "Es una máquina macOS!!"
+    echo "It's a macOS system!!"
     echo ""
-    read -p "..Black Alert!...Presiona Enter para comenzar..."
+    read -p "...Press Enter to start..."
     echo ""
     function mac () {
         source install_mac.sh
@@ -25,15 +23,15 @@ if [[ $OS == "Darwin" ]]; then
     mac
 elif [[ $OS == "Linux" ]]; then
     echo $OS
-    echo "Es una máquina Linux!!"
+    echo "It's a Linux machine!!"
     echo ""
-    read -p "..Black Alert!...Presiona Enter para comenzar..."
+    read -p "...Press Enter to start..."
     echo ""
     function linux () {
         source install_linux.sh
     }
     linux
 else
-    echo 'Sin identificar. Lo siento no podemos continuar. Bye'
+    echo 'Unidentified OS. Sorry, we cannot continue. Bye'
     exit0;
 fi
