@@ -12,8 +12,7 @@ echo ""
 OS=`uname`
 
 if [[ $OS == "Darwin" ]]; then
-    echo $OS
-    echo "It's a macOS system!!"
+    echo "$OS. It's a macOS system!!"
     echo ""
     read -p "...Press Enter to start..."
     echo ""
@@ -22,8 +21,7 @@ if [[ $OS == "Darwin" ]]; then
     }
     mac
 elif [[ $OS == "Linux" ]]; then
-    echo $OS
-    echo "It's a Linux machine!!"
+    echo "$OS It's a Linux system!!"
     echo ""
     read -p "...Press Enter to start..."
     echo ""
