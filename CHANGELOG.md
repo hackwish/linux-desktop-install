@@ -1,3 +1,10 @@
+## [1.17.4](https://github.com/hackwish/linux-desktop-install/compare/v1.17.3...v1.17.4) (2025-02-07)
+
+
+### Bug Fixes
+
+* **install:** Update roles multiOS ([7351abf](https://github.com/hackwish/linux-desktop-install/commit/7351abf409b683c6e86aeeb1a330958935cf6f39))
+
 ## [1.17.3](https://github.com/hackwish/linux-desktop-install/compare/v1.17.2...v1.17.3) (2025-02-06)
 
 
