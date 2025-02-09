@@ -1,3 +1,10 @@
+## [1.17.5](https://github.com/hackwish/linux-desktop-install/compare/v1.17.4...v1.17.5) (2025-02-09)
+
+
+### Bug Fixes
+
+* **install:** Improve initial message ([a15bcf3](https://github.com/hackwish/linux-desktop-install/commit/a15bcf30d737a5427106b873c04428bdd0c8a741))
+
 ## [1.17.4](https://github.com/hackwish/linux-desktop-install/compare/v1.17.3...v1.17.4) (2025-02-07)
 
 
