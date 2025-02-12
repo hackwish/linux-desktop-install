@@ -13,5 +13,6 @@
     - azurecli
     - cloud-sql-proxy
     - mimirtool
+    - bruno
 
   tasks:

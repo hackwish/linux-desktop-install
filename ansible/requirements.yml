@@ -58,6 +58,8 @@ roles:
 - name: inputleap
   src: https://github.com/hackwish/ansible-inputleap.git
 
+- name: bruno
+  src: https://github.com/hackwish/ansible-bruno.git
 
 # App Roles
 ## Cloud Roles
