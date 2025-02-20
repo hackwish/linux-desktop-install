@@ -9,7 +9,7 @@
 
   roles:
   - common-desktop
-  - brew
+  # - brew
   - docker
   - droidcam
   - lmstudio
