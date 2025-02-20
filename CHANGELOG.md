@@ -1,3 +1,10 @@
+## [1.17.6](https://github.com/hackwish/linux-desktop-install/compare/v1.17.5...v1.17.6) (2025-02-12)
+
+
+### Bug Fixes
+
+* **Install:** Add Bruno ([59d1d90](https://github.com/hackwish/linux-desktop-install/commit/59d1d90994adcf8a093bbd5932888e90cc34a8ec))
+
 ## [1.17.5](https://github.com/hackwish/linux-desktop-install/compare/v1.17.4...v1.17.5) (2025-02-09)
 
 
