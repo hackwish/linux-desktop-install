@@ -1,3 +1,10 @@
+## [1.17.7](https://github.com/hackwish/linux-desktop-install/compare/v1.17.6...v1.17.7) (2025-02-20)
+
+
+### Bug Fixes
+
+* **package:** remove brew role ([e667063](https://github.com/hackwish/linux-desktop-install/commit/e66706367a1080cdb1bfac6fe6db47085897940d))
+
 ## [1.17.6](https://github.com/hackwish/linux-desktop-install/compare/v1.17.5...v1.17.6) (2025-02-12)
 
 
