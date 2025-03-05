@@ -1,3 +1,10 @@
+## [1.17.8](https://github.com/hackwish/linux-desktop-install/compare/v1.17.7...v1.17.8) (2025-03-05)
+
+
+### Bug Fixes
+
+* **linux:** add fontconfig ([a26944b](https://github.com/hackwish/linux-desktop-install/commit/a26944b8e6f630fd8fca5c18cfb26e066ced7aa5))
+
 ## [1.17.7](https://github.com/hackwish/linux-desktop-install/compare/v1.17.6...v1.17.7) (2025-02-20)
 
 
