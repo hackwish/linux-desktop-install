@@ -1,3 +1,10 @@
+## [1.17.10](https://github.com/hackwish/linux-desktop-install/compare/v1.17.9...v1.17.10) (2025-10-27)
+
+
+### Bug Fixes
+
+* **linux:** Add Mint Zara ([097c7f0](https://github.com/hackwish/linux-desktop-install/commit/097c7f06dcb3b41d793c18404fd59a5ef9d93a8c))
+
 ## [1.17.9](https://github.com/hackwish/linux-desktop-install/compare/v1.17.8...v1.17.9) (2025-10-27)
 
 
