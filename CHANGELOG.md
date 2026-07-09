@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/hackwish/linux-desktop-install/compare/v1.17.10...v1.18.0) (2026-07-09)
+
+
+### Features
+
+* **ansible:** Add antigravity and vscode roles to devops ([52154c2](https://github.com/hackwish/linux-desktop-install/commit/52154c240a4f157d57d210bed529cc1788942665))
+
 ## [1.17.10](https://github.com/hackwish/linux-desktop-install/compare/v1.17.9...v1.17.10) (2025-10-27)
 
 
