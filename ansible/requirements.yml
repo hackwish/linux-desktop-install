@@ -48,6 +48,12 @@ roles:
 - name: mimirtool
   src: https://github.com/hackwish/ansible-mimirtool.git
 
+- name: antigravity
+  src: https://github.com/hackwish/ansible-antigravity.git
+
+- name: vscode
+  src: https://github.com/hackwish/ansible-vscode.git
+
 ## Tools Roles
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
