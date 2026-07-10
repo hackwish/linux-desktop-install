@@ -19,7 +19,7 @@ roles:
 - name: common-mac-devops-desktop
   src: https://github.com/hackwish/ansible-common-mac-devops-desktop.git
 
-# Common Tools Roles
+# MultiOS Roles
 - name: lmstudio
   src: https://github.com/hackwish/ansible-lmstudio.git
 
@@ -32,7 +32,6 @@ roles:
 - name: bruno
   src: https://github.com/hackwish/ansible-bruno.git
 
-# DevOps Cloud Roles
 - name: aws-vpn-client
   src: https://github.com/hackwish/ansible-aws-vpn-client.git
 
@@ -44,3 +43,24 @@ roles:
 
 - name: mimirtool
   src: https://github.com/hackwish/ansible-mimirtool.git
+
+- name: antigravity
+  src: https://github.com/hackwish/ansible-antigravity.git
+
+- name: vscode
+  src: https://github.com/hackwish/ansible-vscode.git
+
+- name: ai_skills
+  src: https://github.com/hackwish/ansible-ai-skills.git
+
+- name: google-chrome
+  src: https://github.com/hackwish/ansible-google-chrome.git
+
+- name: edge-browser
+  src: https://github.com/hackwish/ansible-edge-browser.git
+
+- name: opencode
+  src: https://github.com/hackwish/ansible-opencode.git
+
+- name: ollama
+  src: https://github.com/hackwish/ansible-ollama.git

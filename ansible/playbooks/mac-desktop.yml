@@ -15,5 +15,7 @@
     - lmstudio
     - inputleap
     - docker
+    - google-chrome
+    - edge-browser
 
   tasks:

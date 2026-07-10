@@ -28,7 +28,7 @@
   - k3d
   - k6
   - kops
-  - kubeseal
+  # - kubeseal
   - mimirtool
   - powershell
   - stern
@@ -37,10 +37,14 @@
   - terragrunt
   - tfenv
   - tfswitch
-  - velero-io
+  # - velero-io
   - bruno
   - antigravity
   - vscode
+  - ai_skills
+  - opencode
+  - ollama
+
   tasks:
   - name: Config git user
     shell: git config --global color.ui true && git config --global user.email "{{ item }}@{{ ansible_fqdn }}" && git config --global user.name "{{ item }}" && git config --global init.defaultBranch main

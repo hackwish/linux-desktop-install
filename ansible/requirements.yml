@@ -35,7 +35,6 @@ roles:
   src: https://github.com/hackwish/ansible-common-tv.git
 
 # MultiOS Roles
-## Cloud Roles
 - name: aws-vpn-client
   src: https://github.com/hackwish/ansible-aws-vpn-client.git
 
@@ -48,13 +47,6 @@ roles:
 - name: mimirtool
   src: https://github.com/hackwish/ansible-mimirtool.git
 
-- name: antigravity
-  src: https://github.com/hackwish/ansible-antigravity.git
-
-- name: vscode
-  src: https://github.com/hackwish/ansible-vscode.git
-
-## Tools Roles
 - name: docker
   src: https://github.com/hackwish/ansible-docker.git
 
@@ -66,6 +58,29 @@ roles:
 
 - name: bruno
   src: https://github.com/hackwish/ansible-bruno.git
+
+- name: antigravity
+  src: https://github.com/hackwish/ansible-antigravity.git
+
+- name: vscode
+  src: https://github.com/hackwish/ansible-vscode.git
+
+- name: ai_skills
+  src: https://github.com/hackwish/ansible-ai-skills.git
+
+- name: google-chrome
+  src: https://github.com/hackwish/ansible-google-chrome.git
+
+- name: edge-browser
+  src: https://github.com/hackwish/ansible-edge-browser.git
+
+- name: opencode
+  src: https://github.com/hackwish/ansible-opencode.git
+
+- name: ollama
+  src: https://github.com/hackwish/ansible-ollama.git
+
+# -------------------------------------------------------------------- # 
 
 # App Roles
 ## Cloud Roles

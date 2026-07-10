@@ -14,5 +14,10 @@
     - cloud-sql-proxy
     - mimirtool
     - bruno
+    - antigravity
+    - ai_skills
+    - vscode
+    - opencode
+    - ollama
 
   tasks:
