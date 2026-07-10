@@ -12,8 +12,6 @@
   # - brew
   - docker
   - droidcam
-  - lmstudio
-  - inputleap
   - edge-browser
   - google-chrome
   # - supersonic - temporal disable for change on install definition by source

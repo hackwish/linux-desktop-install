@@ -1,6 +1,6 @@
 ---
-- name: Run common
-  import_playbook: common.yml
+- name: Run common and desktop
+  import_playbook: desktop.yml
 
 - name: Deploy TV Linux Desktop with Ansible
   hosts: tv
@@ -8,12 +8,12 @@
 
   # vars:
 
-  roles:
-    - common-desktop
-    # - plank
-    - droidcam
-    # - anydesk
-    - docker
+  # roles:
+    # - common-desktop
+    # # - plank
+    # - droidcam
+    # # - anydesk
+    # - docker
 
   tasks:
     - name: Fix Docker execution without sudo #Issue #7

@@ -12,8 +12,6 @@
 
   roles:
     - common-mac-desktop
-    - lmstudio
-    - inputleap
     - docker
     - google-chrome
     - edge-browser

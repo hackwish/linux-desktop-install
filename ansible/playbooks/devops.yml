@@ -12,12 +12,6 @@
   # terraform_ver: "0.12.20"
 
   roles:
-  # - azure-data-studio
-  # - common-desktop
-  # - docker
-  # - droidcam
-  # - feishin
-  # - supersonic
   - common-devops-desktop
   - andrewrothstein.sops
   - aws-vpn-client
@@ -44,6 +38,8 @@
   - ai_skills
   - opencode
   - ollama
+  - lmstudio
+  - inputleap
 
   tasks:
   - name: Config git user
