@@ -41,6 +41,20 @@ fi
 echo "Actualizando el sistema..."
 apt-get update && apt-get -y --force-yes upgrade
 
+echo "Instalando y configurando Flatpak..."
+if ! command -v flatpak &> /dev/null; then
+    apt-get install --no-install-recommends -y flatpak
+fi
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo || true
+flatpak update -y
+
+echo "Instalando y configurando Snap..."
+if ! command -v snap &> /dev/null; then
+    apt-get install --no-install-recommends -y snapd
+fi
+rm -f /etc/apt/preferences.d/nosnap.pref
+snap refresh || true
+
 echo "Instalando dependencias previas"
 apt-get install --no-install-recommends -y curl wget rsync git fontconfig software-properties-common apt-transport-https ca-certificates gnupg2 openssh-server ubuntu-keyring python3 python3-pip python3-openssl python3-wheel python3-jinja2 python3-setuptools python-is-python3
 
@@ -71,7 +85,7 @@ echo "Ahora vamos a adecuar la instalación..."
 # Fix Ubuntu codenames for based distros
 echo "CodeName ANTES: $DISTRIB_CODENAME"
 # Linux Mint distros
-if [ ${DISTRIB_CODENAME} == 'wilma' ] || [ ${DISTRIB_CODENAME} == 'xia' ] || [ ${DISTRIB_CODENAME} == 'zara' ]; then
+if [ ${DISTRIB_CODENAME} == 'wilma' ] || [ ${DISTRIB_CODENAME} == 'xia' ] || [ ${DISTRIB_CODENAME} == 'zara' ] || [ ${DISTRIB_CODENAME} == 'zena' ]; then
         echo $DISTRIB_CODENAME
         export DISTRIB_CODENAME='noble'
 elif [ ${DISTRIB_CODENAME} == 'vanessa' ] || [ ${DISTRIB_CODENAME} == 'vera' ] || [ ${DISTRIB_CODENAME} == 'victoria' ] || [ ${DISTRIB_CODENAME} == 'virginia' ]; then
@@ -97,13 +111,7 @@ fi
 
 echo "CodeName AHORA: $DISTRIB_CODENAME"
 
-# Workarounds Linux Mint
-## Snaps
-rm -f /etc/apt/preferences.d/nosnap.pref
-apt update
-apt install snapd
-
-## Mouse Pointer theme in root, Qt and Flatpak applications
+# Mouse Pointer theme in root, Qt and Flatpak applications
 update-alternatives --auto x-cursor-theme
 
 #Ansible
