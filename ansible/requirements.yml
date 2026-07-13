@@ -80,6 +80,12 @@ roles:
 - name: ollama
   src: https://github.com/hackwish/ansible-ollama.git
 
+- name: feishin
+  src: https://github.com/hackwish/ansible-feishin.git
+
+- name: obsidian
+  src: https://github.com/hackwish/ansible-obsidian.git
+
 # -------------------------------------------------------------------- # 
 
 # App Roles
@@ -115,9 +121,6 @@ roles:
 
 # - name: supersonic
 #   src: https://github.com/hackwish/ansible-supersonic.git
-
-# - name: feishin
-#   src: https://github.com/hackwish/ansible-feishin.git
 
 # - name: netdata
 #   src: https://github.com/hackwish/ansible-netdata.git

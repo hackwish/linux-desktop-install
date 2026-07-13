@@ -15,7 +15,8 @@
   - edge-browser
   - google-chrome
   # - supersonic - temporal disable for change on install definition by source
-  # - feishin
+  - feishin
+  - obsidian
 
   tasks:
   - name: Fix Docker execution without sudo #Issue #7
