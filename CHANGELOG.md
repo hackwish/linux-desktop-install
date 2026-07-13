@@ -1,3 +1,16 @@
+# [1.19.0](https://github.com/hackwish/linux-desktop-install/compare/v1.18.0...v1.19.0) (2026-07-10)
+
+
+### Bug Fixes
+
+* **ansible:** Update device playbooks ([e7bad31](https://github.com/hackwish/linux-desktop-install/commit/e7bad31aaee83eee7d3a252959fc5eadc32ade03))
+
+
+### Features
+
+* **ansible:** add cloud, multiOS, and devops roles to requirements ([06cef8f](https://github.com/hackwish/linux-desktop-install/commit/06cef8f371ccdc3a9d2c193b3f4b734f1c0dfe3d))
+* **docs:** add repository documentation ([8a8e254](https://github.com/hackwish/linux-desktop-install/commit/8a8e2545a5ee05a754161a3fe5a64c0d375ed877))
+
 # [1.18.0](https://github.com/hackwish/linux-desktop-install/compare/v1.17.10...v1.18.0) (2026-07-09)
 
 
