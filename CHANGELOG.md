@@ -1,3 +1,12 @@
+# [1.20.0](https://github.com/hackwish/linux-desktop-install/compare/v1.19.0...v1.20.0) (2026-07-13)
+
+
+### Features
+
+* **ansible:** agregar roles feishin y obsidian para Linux ([fbc694a](https://github.com/hackwish/linux-desktop-install/commit/fbc694ab188328efc94bce97afd1a9a624cd8f34))
+* **ansible:** agregar roles feishin y obsidian para Mac ([83f08a1](https://github.com/hackwish/linux-desktop-install/commit/83f08a1560ac7b8ee40fe68b2d6994e383dee0c9))
+* **install-linux:** agregar instalación de flatpak y snap ([e8fa54a](https://github.com/hackwish/linux-desktop-install/commit/e8fa54a532bf4b0fd83f6e7ccbc6b2628c0f6cfd))
+
 # [1.19.0](https://github.com/hackwish/linux-desktop-install/compare/v1.18.0...v1.19.0) (2026-07-10)
 
 
