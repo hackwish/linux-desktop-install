@@ -11,9 +11,11 @@
     #   - "/usr/local/share/zsh/site-functions"
 
   roles:
-    - common-mac-desktop
-    - docker
-    - google-chrome
-    - edge-browser
+  - common-mac-desktop
+  - docker
+  - google-chrome
+  - edge-browser
+  - feishin
+  - obsidian
 
   tasks:

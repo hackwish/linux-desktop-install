@@ -64,3 +64,9 @@ roles:
 
 - name: ollama
   src: https://github.com/hackwish/ansible-ollama.git
+
+- name: feishin
+  src: https://github.com/hackwish/ansible-feishin.git
+
+- name: obsidian
+  src: https://github.com/hackwish/ansible-obsidian.git
