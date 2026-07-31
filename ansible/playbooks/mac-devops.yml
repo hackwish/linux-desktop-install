@@ -8,17 +8,19 @@
   vars:
 
   roles:
-    - common-mac-devops-desktop
-    - aws-vpn-client
-    - azurecli
-    - cloud-sql-proxy
-    - mimirtool
-    - bruno
-    - antigravity
-    - ai_skills
-    - vscode
-    - opencode
-    - ollama
-    - lmstudio
-    - inputleap
+  - common-mac-devops-desktop
+  - aws-vpn-client
+  - azurecli
+  - cloud-sql-proxy
+  - mimirtool
+  - bruno
+  - antigravity
+  - ai_skills
+  - vscode
+  - opencode
+  - ollama
+  - lmstudio
+  - inputleap
+  - zed
+  - freelens
   tasks:
