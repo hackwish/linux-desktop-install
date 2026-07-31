@@ -70,3 +70,9 @@ roles:
 
 - name: obsidian
   src: https://github.com/hackwish/ansible-obsidian.git
+
+- name: zed
+  src: https://github.com/hackwish/ansible-zed.git
+
+- name: freelens
+  src: https://github.com/hackwish/ansible-freelens.git
