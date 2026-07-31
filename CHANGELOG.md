@@ -1,3 +1,12 @@
+# [1.21.0](https://github.com/hackwish/linux-desktop-install/compare/v1.20.0...v1.21.0) (2026-07-31)
+
+
+### Features
+
+* **ansible:** add zed and freelens roles to devops playbook ([db31f72](https://github.com/hackwish/linux-desktop-install/commit/db31f726c14485219e95856aa5a955021a007453))
+* **ansible:** add zed and freelens roles to requirements ([5bf7213](https://github.com/hackwish/linux-desktop-install/commit/5bf721320a25d2a5ca68448ead6150ccded3a21b))
+* **mac:** add zed and freelens roles to mac-devops playbook ([ec944bc](https://github.com/hackwish/linux-desktop-install/commit/ec944bc5fe27d7cafbb2d0c26b6e922b3137f07d))
+
 # [1.20.0](https://github.com/hackwish/linux-desktop-install/compare/v1.19.0...v1.20.0) (2026-07-13)
 
 
