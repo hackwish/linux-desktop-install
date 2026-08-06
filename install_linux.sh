@@ -19,23 +19,14 @@ export ARCHITECTURE=`uname -a | awk '{print $13}'`
 apt-add-repository universe
 apt-add-repository multiverse
 
-echo "Vamos a verificar si tiene Ansible y que distribución usas..."
+echo "Vamos a verificar si tiene Ansible y la distribución que usas..."
+echo "Instalaremos Ansible mediante pip para obtener la versión más reciente disponible en Linux."
 
-# Ubuntu distros
-if [ ${DISTRIB_CODENAME} == 'bionic' ] || [ ${DISTRIB_CODENAME} == 'disco' ] || [ ${DISTRIB_CODENAME} == 'eoan' ]; then
-	echo "Adding Ansible PPA"
-   	apt-add-repository --yes ppa:ansible/ansible
-# Linux Mint distros
-elif [ ${DISTRIB_CODENAME} == 'tricia' ] || [ ${DISTRIB_CODENAME} == 'tina' ] || [ ${DISTRIB_CODENAME} == 'tessa' ] || [ ${DISTRIB_CODENAME} == 'tara' ]; then
-	echo "Manual adding Ansible PPA"
-	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" >> /etc/apt/sources.list.d/ansible-ubuntu-ansible-bionic.list
-# ElementaryOS distros
-elif [ ${DISTRIB_CODENAME} == 'hera' ] || [ ${DISTRIB_CODENAME} == 'juno' ]; then
-	echo "Manual adding Ansible PPA"
-	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main" >> /etc/apt/sources.list.d/ansible-ubuntu-ansible-bionic.list
-else
-	echo "NOT Adding Ansible PPA"
-	echo $DISTRIB_CODENAME
+if command -v apt-get >/dev/null 2>&1; then
+    if dpkg -s ansible >/dev/null 2>&1; then
+        echo "Se encontró una instalación previa de Ansible desde apt; se eliminará para priorizar la versión más reciente."
+        DEBIAN_FRONTEND=noninteractive apt-get remove -y ansible ansible-core >/dev/null 2>&1 || true
+    fi
 fi
 
 echo "Actualizando el sistema..."
@@ -78,7 +69,25 @@ else
 	# rm -rf libwxgtk*
 fi
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ansible
+echo "Instalando la última versión de Ansible para Linux..."
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "Python 3 no está disponible; instalando dependencias básicas..."
+    apt-get install --no-install-recommends -y python3 python3-pip python3-venv python3-full
+else
+    apt-get install --no-install-recommends -y python3-pip python3-venv python3-full
+fi
+
+ANSIBLE_VENV_DIR="/opt/ansible-venv"
+python3 -m venv "$ANSIBLE_VENV_DIR"
+"$ANSIBLE_VENV_DIR/bin/pip" install --upgrade pip setuptools wheel
+"$ANSIBLE_VENV_DIR/bin/pip" install --upgrade ansible-core
+
+ln -sf "$ANSIBLE_VENV_DIR/bin/ansible" /usr/local/bin/ansible
+ln -sf "$ANSIBLE_VENV_DIR/bin/ansible-playbook" /usr/local/bin/ansible-playbook
+ln -sf "$ANSIBLE_VENV_DIR/bin/ansible-galaxy" /usr/local/bin/ansible-galaxy
+export PATH="/usr/local/bin:$PATH"
+
+ansible --version | head -n 5
 
 echo "Ahora vamos a adecuar la instalación..."
 
