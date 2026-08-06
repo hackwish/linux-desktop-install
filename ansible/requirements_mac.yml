@@ -1,10 +1,10 @@
 collections:
 - ansible.posix
+- community.crypto
 - community.docker
 - community.general
 - community.sops
 - kubernetes.core
-
 roles:
 # Common roles
 - name: common-mac
