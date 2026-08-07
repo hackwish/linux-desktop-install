@@ -1,3 +1,18 @@
+# [1.22.0](https://github.com/hackwish/linux-desktop-install/compare/v1.21.0...v1.22.0) (2026-08-07)
+
+
+### Bug Fixes
+
+* **ansible:** update reqs ([95ce54c](https://github.com/hackwish/linux-desktop-install/commit/95ce54cb8ff006acb4d6fbe8ced4dd3f561b0b62))
+* **install-mac:** support asdf 0.16+ commands ([5c12d3e](https://github.com/hackwish/linux-desktop-install/commit/5c12d3e03520d44a5e08fe61293d446fea92f6ec))
+* **installer:** update linux installer ([ab9fec6](https://github.com/hackwish/linux-desktop-install/commit/ab9fec613aed0da9159195fc888e7832ba1e21a3))
+* **package:** update community module ([8a9cf16](https://github.com/hackwish/linux-desktop-install/commit/8a9cf16e54f56ac9a00f236b56251746265a1e50))
+
+
+### Features
+
+* **ansible:** add whisper role to requirements ([ddd6c17](https://github.com/hackwish/linux-desktop-install/commit/ddd6c17e681c98183aec9980fab282ccc06d2dc8))
+
 # [1.21.0](https://github.com/hackwish/linux-desktop-install/compare/v1.20.0...v1.21.0) (2026-07-31)
 
 
