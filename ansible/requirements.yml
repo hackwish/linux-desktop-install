@@ -89,6 +89,10 @@ roles:
 
 - name: freelens
   src: https://github.com/hackwish/ansible-freelens.git
+
+- name: whisper
+  src: https://github.com/hackwish/ansible-whisper.git
+
 # -------------------------------------------------------------------- # 
 
 # App Roles
